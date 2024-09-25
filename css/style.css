@@ -36,6 +36,8 @@
     background-image: url("../img/paper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    zoom: 30%;
 }
 
 .name
@@ -44,39 +46,39 @@
     width: 100%;
 }
 
-.he
+.newspaper_name
 {
-    line-height: 0.2vw;
+    display: flex;
+    flex-direction: column;
 }
 
-.name h1
+.first-line
 {
     font-family: Snell Roundhand, cursive;
     color: var(--main-color);
     font-size: 150px;
-    text-align: center;
-    margin-right: 2vw;
+    margin-left: 400px;
 }
 
-.name h2
+.second-line
 {
     font-family: 'Headlines', sans-serif;
     color: var(--main-color);
     font-size: 153px;
 }
 
-.name h3
+.third-line
 {
     font-family: Snell Roundhand, cursive;
     color: var(--main-color);
     font-size: 70px;
-    text-align: center;
+    margin-left: 100px;
 }
 
 .logo
 {
-    font-size: 20vw;
-    width: 12vw;
+    font-size: 20px;
+
 }
 
 .name,
@@ -95,32 +97,23 @@ tr, td, img
     transition: opacity 0.5s ease-in-out;
 }
 
-.A4:hover *,
-.name:hover *,
-.he:hover *,
-.play-news:hover *,
-.weather:hover *,
-.main:hover *,
-.halloween:hover *,
-.sec:hover *,
-.drink:hover *,
-.col-first:hover *,
-.col-second:hover *,
-h1:hover, h2:hover,
-h3:hover, p:hover,
-li:hover, table:hover,
-tr:hover, td:hover,
-img:hover
+.A4:hover *
 {
     opacity: 1;
 }
 
+@media print
+{
+    .A4 * {
+        opacity: 1;
+    }
+}
 
 .play-news
 {
     padding: 20px;
     text-align: center;
-    width: 15%;
+    width: 500px;
     margin-left: 2000px;
     height: 2000px;
     margin-top: -600px;
@@ -131,7 +124,7 @@ img:hover
 {
     padding: 20px;
     text-align: center;
-    width: 15%;
+    width: 500px;
     margin-left: 2100px;
     height: 2000px;
     margin-top: 50px;
@@ -176,7 +169,7 @@ img:hover
     text-align: left;
 }
 
-.zod
+.zodiac
 {
     margin-left: -100px;
     margin-top: -100px;
@@ -199,13 +192,30 @@ img:hover
     margin-top: -30px;
 }
 
-.run
+.marquee-container
 {
-    font-size: 100px;
+    width: 2500px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.marquee
+{
+    display: inline-block;
+    animation: run 13s linear infinite;
+    font-size: 90px;
     font-family: Luminari, fantasy;
     color: var(--main-color);
-    margin-top: 200px;
-    margin-left: 90px;
+}
+
+@keyframes run
+{
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-20%); }
+    100% { transform: translateX(0); }
 }
 
 
@@ -264,16 +274,19 @@ img:hover
     display: flex;
 }
 
-.col-first
+.col-first,
+.col-second
 {
     width: 600px;
     margin-left: 60px;
 }
 
-.col-second
+.col-first::first-letter,
+.col-second::first-letter
 {
-    width: 600px;
-    margin-left: 50px;
+    font-size: 90px;
+    font-family: Snell Roundhand, cursive;
+    font-weight: bold;
 }
 
 .video
@@ -284,12 +297,24 @@ img:hover
     margin-left: 50px;
 }
 
+
 .witch
 {
-    font-size: 10px;
+    animation: marquee 10s infinite linear;
 }
 
-.sec
+@keyframes marquee
+{
+    0% {
+        transform: translateX(1000%);
+    }
+    100% {
+        transform: translateX(30%);
+    }
+}
+
+
+.joke
 {
     display: flex;
 }
@@ -298,9 +323,10 @@ img:hover
 {
     width: 60%;
     margin-left: 50px;
+    height: 60%;
 }
 
-.sec h1
+.joke h1
 {
     font-family: 'Mirra', sans-serif;
     color: var(--main-color);
@@ -308,6 +334,13 @@ img:hover
     line-height: 60px;
     margin-right: 20px;
     margin-left: 25px;
+}
+
+.joke h1::first-letter
+{
+    font-size: 90px;
+    font-family: Snell Roundhand, cursive;
+    font-weight: bold;
 }
 
 .drink
@@ -324,6 +357,13 @@ img:hover
     font-size: 50px;
 }
 
+.drink h1::first-letter
+{
+    font-size: 90px;
+    font-family: Snell Roundhand, cursive;
+    font-weight: bold;
+}
+
 .drink ul
 {
     font-family: Optima, sans-serif;
@@ -334,6 +374,7 @@ img:hover
 .cheers
 {
     width: 42%;
+    height: 17%;
     margin-top: -800px;
     filter: grayscale(100%);
     margin-left: 50px;
@@ -404,4 +445,13 @@ img:hover
     display: flex;
     margin-left: 1200px;
     margin-top: -100px;
+}
+
+
+.col-one::first-letter,
+.col-two::first-letter
+{
+    font-size: 90px;
+    font-family: Snell Roundhand, cursive;
+    font-weight: bold;
 }
