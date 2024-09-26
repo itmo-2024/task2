@@ -1,0 +1,189 @@
+@page {
+  size: A4 portrait;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+#header-header h1 {
+  font-size: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+section {
+  width: 210mm;
+  height: 297mm;
+  padding-left: 20px;
+  padding-right: 20px;
+  page-break-after: always;
+  break-after: page;
+}
+
+.my-header {
+  width: 100%;
+  /*border: 2px solid cyan;*/
+}
+
+#header-header {
+  width: 100%;
+}
+
+#left-header-text {
+  width: 20%;
+  height: 100%;
+  float: left;
+  /*border: 2px solid yellow;*/
+}
+
+#right-header-text {
+  width: 20%;
+  height: 100%;
+  float: left;
+  /*border: 2px solid green;*/
+}
+
+#header-center {
+  width: 60%;
+  height: 100%;
+  float: left;
+  background-color: green;
+  /*border: 2px solid red;*/
+}
+
+.my-header h2 {
+  text-align: center;
+}
+
+.my-header table {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.my-header td {
+  width: 33.33%;
+}
+
+#container1 {
+  width: 100%;
+  height: 35%;
+  border-bottom: 4px dotted black;
+}
+
+#first-article {
+  width: 30%;
+  height: 100%;
+  /*border: 2px solid yellow;*/
+  float: left;
+  padding-right: 5px;
+}
+
+#first-article p::first-letter {
+  font-size: 200%;
+  color: green;
+}
+
+#main-image {
+  box-sizing: border-box;
+  width: 40%;
+  height: 100%;
+  /*border: 2px solid red;*/
+  float: left;
+  overflow: hidden;
+}
+
+#second-article {
+  width: 30%;
+  height: 100%;
+  /*border: 2px solid green;*/
+  float: right;
+  padding-left: 5px;
+}
+
+#container2 {
+  width: 100%;
+  height: 35%;
+  border-bottom: 4px dotted black;
+}
+
+#vertical-header {
+  width: 10%;
+  height: 100%;
+  /*border: 2px solid yellow;*/
+  float: left;
+  font-size: 60px;
+  text-align: center;
+}
+
+#vertical-header p {
+  font-size: 50px;
+  margin-top: 0px;
+  line-height: 50px;
+}
+
+#smaller-image1 {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid red;*/
+  float: left;
+}
+
+#third-article {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid pink;*/
+  float: left;
+}
+
+#fourth-article {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid plum;*/
+  float: left;
+}
+
+#smaller-image2 {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid blue;*/
+  float: left;
+}
+
+#fifth-article {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid lightskyblue;*/
+  float: left;
+}
+
+#sixth-article {
+  width: 30%;
+  height: 50%;
+  /*border: 2px solid lightseagreen;*/
+  float: left;
+}
+
+#container3 {
+  width: 100%;
+}
+
+#left-bottom-emoji {
+  width: 10%;
+  float: left;
+}
+
+#container3 p {
+  width: 80%;
+  text-align: center;
+  float: left;
+}
+
+#right-bottom-emoji {
+  width: 10%;
+  float: left;
+}
