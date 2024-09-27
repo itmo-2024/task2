@@ -1,34 +1,31 @@
-:root
-{
+:root {
     --main-color: #36281d;
+    --title-font: "Mirra", sans-serif;
+    --news-font: "Headlines", sans-serif;
+    --main-news: Snell Roundhand, cursive;
 }
 
-@font-face
-{
-    font-family: 'Mirra';
-    src: url('../fonts/Mirra.otf') format('opentype');
+@font-face {
+    font-family: "Mirra";
+    src: url("../fonts/Mirra.otf") format("opentype");
 }
 
-@font-face
-{
-    font-family: 'weather';
-    src: url('../fonts/weather.otf') format('opentype');
+@font-face {
+    font-family: "weather";
+    src: url("../fonts/weather.otf") format("opentype");
 }
 
-@font-face
-{
-    font-family: 'Headlines';
-    src: url('../fonts/Headlines.ttf') format('opentype');
+@font-face {
+    font-family: "Headlines";
+    src: url("../fonts/Headlines.ttf") format("opentype");
 }
 
-@font-face
-{
-    font-family: 'halloween';
-    src: url('../fonts/halloween.ttf') format('opentype');
+@font-face {
+    font-family: "halloween";
+    src: url("../fonts/halloween.ttf") format("opentype");
 }
 
-.A4
-{
+.A4 {
     width: 70cm;
     height: 100cm;
     margin: auto;
@@ -37,91 +34,132 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    zoom: 30%;
 }
 
-.name
-{
+.A4:has(> .item:focus) {
+    background: var(--main-color);
+    border: 10px solid beige;
+}
+
+.item:focus ~ * * {
+    color: beige;
+}
+
+.item:focus ~ * .witch {
+    filter: sepia(10) hue-rotate(30deg) brightness(7);
+}
+
+.item {
+    font-size: 500%;
+    background-color: beige;
+    border-radius: 10%;
+    border: var(--main-color);
+    color: var(--main-color);
+}
+@media screen {
+    .A4 {
+        transform: scale(0.3);
+        transform-origin: 300px 50px;
+    }
+}
+
+@media print {
+    .A4 {
+        transform: scale(1);
+        transform-origin: left top;
+        margin: 0;
+        @supports not (-moz-appearance: none) {
+            zoom: 30%;
+        }
+
+    }
+}
+.name {
     display: flex;
+    flex-direction: row;
     width: 100%;
 }
 
-.newspaper_name
-{
+.newspaper-name {
     display: flex;
     flex-direction: column;
 }
 
-.first-line
-{
-    font-family: Snell Roundhand, cursive;
+.first-line {
+    font: 400% var(--main-news);
     color: var(--main-color);
-    font-size: 150px;
     margin-left: 400px;
 }
 
-.second-line
-{
-    font-family: 'Headlines', sans-serif;
+.second-line {
+    font: 500% var(--news-font);
     color: var(--main-color);
-    font-size: 153px;
 }
 
-.third-line
-{
-    font-family: Snell Roundhand, cursive;
+.third-line {
+    font: 200% var(--main-news);
     color: var(--main-color);
-    font-size: 70px;
     margin-left: 100px;
 }
 
-.logo
-{
+.logo {
     font-size: 20px;
-
 }
 
 .name,
-.he,
 .play-news,
 .weather,
 .main,
 .halloween,
-.sec, .drink,
-.col-first, .col-second,
-h1, h2, h3, p, li,
+.sec,
+.drink,
+.col-first,
+.col-second,
+h1,
+h2,
+h3,
+p,
+li,
 table,
-tr, td, img
-{
+tr,
+td,
+img {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
 }
 
-.A4:hover *
-{
+.A4:hover * {
     opacity: 1;
 }
 
-@media print
-{
+@media print {
     .A4 * {
         opacity: 1;
     }
 }
 
-.play-news
-{
+.play-news {
     padding: 20px;
     text-align: center;
-    width: 500px;
     margin-left: 2000px;
-    height: 2000px;
-    margin-top: -600px;
     position: absolute;
 }
 
-.weather
-{
+.play-news h1 {
+    font: bold 80px var(--news-font);
+    color: var(--main-color);
+}
+
+.play-news h2 {
+    font: bold 50px var(--news-font);
+    color: var(--main-color);
+    margin-left: 250px;
+}
+
+.weather {
     padding: 20px;
     text-align: center;
     width: 500px;
@@ -131,69 +169,39 @@ tr, td, img
     position: absolute;
 }
 
-.weather h2
-{
-    font-family: Comic Sans MS, Comic Sans, cursive;
+.weather h2 {
+    font: bold 50px Comic Sans MS, Comic Sans, cursive;
     color: var(--main-color);
-    font-size: 50px;
-    font-weight: bold;
     text-align: left;
     line-height: 10px;
 }
 
-.weather h1
-{
-    font-family: 'Headlines', sans-serif;
+.weather h1 {
+    font: bold 70px var(--news-font);
     color: var(--main-color);
-    font-size: 70px;
-    font-weight: bold;
     text-align: left;
+    display: flex;
+    flex-direction: row;
 }
 
-.weather h3
-{
-    font-family: 'weather', sans-serif;
+.weather h3 {
+    font: bold 90px "weather", sans-serif;
     color: var(--main-color);
-    font-size: 90px;
-    font-weight: bold;
     text-align: left;
     line-height: 10px;
 }
 
-.weather h4
-{
-    font-family: 'Headlines', sans-serif;
+.weather h4 {
+    font: bold 70px var(--news-font);
     color: var(--main-color);
-    font-size: 70px;
-    font-weight: bold;
     text-align: left;
 }
 
-.zodiac
-{
-    margin-left: -100px;
+.zodiac {
     margin-top: -100px;
 }
-.play-news h1
-{
-    font-family: 'Headlines', sans-serif;
-    color: var(--main-color);
-    font-size: 80px;
-    font-weight: bold;
-}
 
-.play-news h2
-{
-    font-family: 'Headlines', sans-serif;
-    color: var(--main-color);
-    font-size: 50px;
-    font-weight: bold;
-    margin-left: 250px;
-    margin-top: -30px;
-}
-
-.marquee-container
-{
+.marquee-container {
     width: 2500px;
     overflow: hidden;
     white-space: nowrap;
@@ -202,8 +210,7 @@ tr, td, img
     margin-top: 100px;
 }
 
-.marquee
-{
+.marquee {
     display: inline-block;
     animation: run 13s linear infinite;
     font-size: 90px;
@@ -211,100 +218,85 @@ tr, td, img
     color: var(--main-color);
 }
 
-@keyframes run
-{
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-20%); }
-    100% { transform: translateX(0); }
+@keyframes run {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
-
-.main
-{
+.main {
     line-height: 30px;
-    font-family: 'Headlines', sans-serif;
+    font-family: var(--news-font);
     background: #36281d;
     color: beige;
-    width: 62%;
-    height: 6%;
+    width: 60%;
+    height: 7%;
     padding: 50px;
     margin-left: 250px;
 }
 
-.main h1
-{
-    font-size: 120px;
+.main h1 {
+    font-size: 700%;
     margin-top: 10px;
 }
 
-.main h2
-{
-    font-family: 'halloween', sans-serif;
-    font-size: 120px;
-    margin-top: 10px;
-}
-
-.main h3
-{
+.main h2 {
     font-size: 150px;
     text-align: center;
     margin-top: 7px;
 }
 
-.headline
-{
+.headline {
     display: flex;
     align-items: center;
 }
 
-.super:hover
-{
-    text-shadow:
-            -400px 0 rgba(255, 99, 71, 0.5),
-            400px 0 rgba(154, 205, 50, 0.5),
-            0 0 rgba(135, 206, 250, 0.5);
+.pumpkin {
+    font: 75% "halloween", sans-serif;
+    margin-top: 10px;
 }
 
-.halloween
-{
-    font-size: 50px;
-    font-family: 'Mirra', sans-serif;
+.super:hover {
+    text-shadow: -400px 0 rgba(255, 99, 71, 0.5), 400px 0 rgba(154, 205, 50, 0.5),
+    0 0 rgba(135, 206, 250, 0.5);
+}
+
+.halloween {
+    font: 50px var(--title-font);
     color: var(--main-color);
     column-count: 2;
     display: flex;
 }
 
 .col-first,
-.col-second
-{
+.col-second {
     width: 600px;
     margin-left: 60px;
 }
 
 .col-first::first-letter,
-.col-second::first-letter
-{
-    font-size: 90px;
-    font-family: Snell Roundhand, cursive;
-    font-weight: bold;
+.col-second::first-letter {
+    font: bold 90px var(--main-news);
 }
 
-.video
-{
+.video {
     width: 700px;
     height: 700px;
     margin-top: 70px;
     margin-left: 50px;
 }
 
-
-.witch
-{
+.witch {
     animation: marquee 10s infinite linear;
 }
 
-@keyframes marquee
-{
+@keyframes marquee {
     0% {
         transform: translateX(1000%);
     }
@@ -313,66 +305,49 @@ tr, td, img
     }
 }
 
-
-.joke
-{
+.joke {
     display: flex;
 }
 
-.dance
-{
+.dance {
     width: 60%;
     margin-left: 50px;
     height: 60%;
 }
 
-.joke h1
-{
-    font-family: 'Mirra', sans-serif;
+.joke h1 {
+    font: 50px var(--title-font);
     color: var(--main-color);
-    font-size: 50px;
     line-height: 60px;
     margin-right: 20px;
     margin-left: 25px;
 }
 
-.joke h1::first-letter
-{
-    font-size: 90px;
-    font-family: Snell Roundhand, cursive;
-    font-weight: bold;
+.joke h1::first-letter {
+    font: bold 90px var(--main-news);
 }
 
-.drink
-{
+.drink {
     margin-left: 70px;
     margin-top: 200px;
     width: 1200px;
 }
 
-.drink h1
-{
-    font-family: Optima, sans-serif;
+.drink h1 {
+    font: 50px Optima, sans-serif;
     color: var(--main-color);
-    font-size: 50px;
 }
 
-.drink h1::first-letter
-{
-    font-size: 90px;
-    font-family: Snell Roundhand, cursive;
-    font-weight: bold;
+.drink h1::first-letter {
+    font: bold 90px var(--main-news);
 }
 
-.drink ul
-{
-    font-family: Optima, sans-serif;
+.drink ul {
+    font: 50px Optima, sans-serif;
     color: var(--main-color);
-    font-size: 50px;
 }
 
-.cheers
-{
+.cheers {
     width: 42%;
     height: 17%;
     margin-top: -800px;
@@ -380,50 +355,27 @@ tr, td, img
     margin-left: 50px;
 }
 
-.cheers:hover
-{
+.cheers:hover {
     opacity: 0.25;
 }
 
-.hippo h1
-{
-    margin-left: 1200px;
-    margin-top: -900px;
-    font-size: 200px;
-    border: 2px solid;
-    background: #36281d;
-    color: beige;
-    width: 50%;
-    text-align: center;
-    font-family: 'Headlines', sans-serif;
-}
-
-.hippo a
-{
-    color: beige;
-}
-
-.hippo-image
-{
+.hippo-image {
     position: absolute;
     display: none;
     z-index: 100;
     transition: opacity 1s ease-in-out;
 }
 
-.href:hover + .hippo-image
-{
+.href:hover + .hippo-image {
     display: block;
     opacity: 1;
 }
 
-.href:hover + .hippo-image img
-{
+.href:hover + .hippo-image img {
     animation: flyAway 5s linear forwards;
 }
 
-@keyframes flyAway
-{
+@keyframes flyAway {
     0% {
         transform: translate(0, 0);
         opacity: 1;
@@ -438,20 +390,31 @@ tr, td, img
     }
 }
 
-.hippo-news
-{
-    font-size: 50px;
-    font-family: 'Mirra', sans-serif;
+.hippo-news {
+    font: 50px var(--title-font);
     display: flex;
-    margin-left: 1200px;
-    margin-top: -100px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: -150px;
+    width: 55%;
 }
 
+.hippo h1 {
+    font: 200px "Headlines", sans-serif;
+    margin-left: auto;
+    margin-top: -4.5em;
+    border: 2px solid;
+    background: #36281d;
+    color: beige;
+    width: 50%;
+    text-align: center;
+}
+
+.hippo a {
+    color: beige;
+}
 
 .col-one::first-letter,
-.col-two::first-letter
-{
-    font-size: 90px;
-    font-family: Snell Roundhand, cursive;
-    font-weight: bold;
+.col-two::first-letter {
+    font: bold 90px var(--main-news);
 }
