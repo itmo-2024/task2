@@ -1,0 +1,208 @@
+/* Размер страницы для печати A4 */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    background-image: url("photo/paper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    hyphens: auto;
+}
+
+/* Шапка и логотипы */
+.header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img.left-corner {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 250px;
+    height: auto;
+}
+
+.header img.right-corner {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 250px;
+    height: auto;
+}
+
+h1 {
+    font-family: 'fantasy', fantasy;
+    font-size: 4em;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'fantasy', fantasy;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-family: 'fantasy', fantasy;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 0;
+    letter-spacing: 1px;
+    border-left: 5px solid #6c1a1a;
+    margin: 20px 0;
+}
+
+.wanted {
+    column-count: 3;
+    column-gap: 40px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p::first-letter {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6c1a1a;
+    line-height: 1;
+    margin-right: 0.1px;
+    vertical-align: text-top;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: #000;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.columns {
+    column-count: 2;
+    column-gap: 40px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.advertisement {
+    column-count: 1;
+    column-gap: 40px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.last{
+    column-count: 1;
+    column-gap: 40px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.wide-image {
+    width: 300px;
+    margin: 5px 0;
+    height: 270px;
+}
+
+figure {
+    display: block;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.quote {
+    font-family: 'fantasy', fantasy;
+    font-size: 1.5em;
+    text-align: center;
+    color: #000000;
+    font-style: italic;
+    padding: 10px;
+    border-left: 5px solid #6c1a1a;
+    margin: 20px 0;
+}
+
+.vertical-text {
+    font-size: 17px;
+    line-height: 1.52;
+    margin: 10px 0;
+    padding: 3px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Анимация исчезновения */
+@keyframes fadeOut {
+    100% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 7s forwards;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        column-count: 1;
+    }
+
+    .header img.left-corner,
+    .header img.right-corner {
+        width: 100px;
+        height: auto;
+    }
+
+    .main-image {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
