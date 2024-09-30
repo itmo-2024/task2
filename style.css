@@ -1,0 +1,428 @@
+html {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.newspaper {
+    background: url("resources/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-container {
+    position: relative;
+    width: 100%;
+}
+
+.main-header {
+    display: flex;
+    margin: 10px;
+}
+
+.logo-container img {
+    display: flex;
+    width: inherit;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+    animation: blink 5s infinite ease-in-out;
+}
+
+
+.subheader {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.subheader img {
+    width: 100px;
+}
+
+.subheader h1 {
+    font-size: 58px;
+    margin: 0;
+    text-align: center;
+    width: auto;
+    font-family: "ru_Pixel", sans-serif;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    padding: 10px;
+
+}
+
+.main-content {
+    display: block;
+    width: 100%;
+}
+
+main section {
+    display: flex;
+    width: 100%;
+}
+
+main header {
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.robot-combat div, .robot-concierge div, .robot-combat p, .robot-concierge p {
+    width: 14%;
+    margin: 1%;
+}
+
+.robot-combat p, .robot-concierge p {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.robot-combat p {
+    font-family: "ru_Vinque_Rg", sans-serif;
+}
+
+.robot-concierge p {
+    font-family: "ru_Ireland", sans-serif;
+}
+
+.anecdote, .quote p {
+    font-family: "ru_Plainot", sans-serif;
+}
+
+
+@font-face {
+    font-family: 'ru_Vinque_Rg';
+    src: url('resources/ofont.ru_Vinque Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Ireland';
+    src: url('resources/ofont.ru_Ireland.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Plainot';
+    src: url('resources/ofont.ru_Plainot.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Pixel';
+    src: url('resources/ofont.ru_Pixel Cyr.ttf') format('truetype');
+}
+
+main .paragraph-with-figure figure {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+main .paragraph-with-figure figure img {
+    width: 100%;
+}
+
+main .paragraph-with-figure p {
+    width: 100%;
+}
+
+.capitalize-first-letter::first-letter {
+    text-transform: uppercase;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.content aside {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin: 10px;
+}
+
+.content aside section {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 5%;
+    width: 90%;
+    height: 50%;
+}
+
+.content aside section p {
+    margin: 5%;
+    width: 90%;
+}
+
+.content aside header {
+    background: rgba(0, 0, 0, 0.1);
+
+}
+
+.share-prices, .quote {
+    display: block;
+}
+
+.share-prices header, .quote header {
+    width: 100%;
+}
+
+.share-prices img {
+    height: 20px
+}
+
+.share-prices table {
+    width: 100%;
+    text-align: center;
+}
+
+.calendar img {
+    width: 200px;
+    margin: 10px;
+}
+
+.advertisement {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+}
+
+.advertisement header {
+    width: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.advertisement header h3 {
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.advertisement div {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    text-align: center;
+}
+
+.advertisement div figure img {
+    width: 80%;
+    height: auto;
+}
+
+
+.advertisement div figure figcaption {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    height: 100px;
+}
+
+
+
+
+.buy-giant-robot-duel {
+    position: relative;
+}
+
+.buy-giant-robot-duel .hover-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+}
+
+.buy-giant-robot-duel:hover .hover-text {
+    top: -100px;
+    display: flex;
+}
+
+
+.buy-spare-parts {
+    text-align: center;
+}
+
+.buy-spare-parts img:hover {
+    display: inline-block;
+    animation: spin-and-jump 1s infinite ease-in-out;
+}
+
+@keyframes spin-and-jump {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(100%);
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg) scale(75%);
+    }
+    50% {
+        transform: translateY(0) rotate(180deg) scale(50%);
+    }
+    75% {
+        transform: translateY(-30px) rotate(270deg) scale(75%);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg) scale(100%);
+    }
+}
+
+
+.buy-mini-robot-duel {
+    position: relative;
+    text-align: center;
+}
+
+.buy-mini-robot-duel img:hover {
+    animation: fly-and-zoom 10s infinite ease-in-out;
+}
+
+@keyframes fly-and-zoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    25% {
+        transform: scale(4) translate(-120px, -50px) rotate(360deg);
+    }
+    50% {
+        transform: scale(2) translate(-160px, -300px) rotate(0deg);
+    }
+    75% {
+        transform: scale(4) translate(-50px, -150px) rotate(360deg);
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+q {
+    font-style: italic;
+}
+
+q:hover {
+    animation: blink 5s infinite ease-in-out;
+}
+
+
+@keyframes blink {
+    0% {
+        color: hsl(0, 100%, 50%);
+    }
+    16.67% {
+        color: hsl(60, 100%, 50%);
+    }
+    33.33% {
+        color: hsl(120, 100%, 50%);
+    }
+    50% {
+        color: hsl(180, 100%, 50%);
+    }
+    66.67% {
+        color: hsl(240, 100%, 50%);
+    }
+    83.33% {
+        color: hsl(300, 100%, 50%);
+    }
+    100% {
+        color: hsl(0, 100%, 50%);
+    }
+}
+
+.dancing-yellow-robot:hover, .dancing-white-robot:hover {
+    animation: spin-and-jump 0.5s infinite ease-in-out;
+}
+
+main h2 {
+    overflow: hidden;
+    animation: font-and-size-change 1s infinite ease-in-out;
+    font-size: 70px;
+
+}
+
+
+@keyframes font-and-size-change {
+    0% {
+        font-family: 'Times New Roman', serif;
+    }
+    20% {
+        font-family: 'Comic Sans MS', cursive;
+    }
+    40% {
+        font-family: 'Impact', sans-serif;
+    }
+    70% {
+        font-family: 'Lucida Console', monospace;
+    }
+    100% {
+        font-family: 'Times New Roman', serif;
+    }
+}
+
+
+.hidden-robot img {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    animation: fly 5s infinite ease-in-out;
+}
+
+.hidden-robot img:hover {
+    opacity: 1;
+}
+
+.hidden-robot {
+    width: 300px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.hidden-robot p {
+    font-size: 30px;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(130px, 0px) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+img {
+    filter: grayscale(100%);
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
