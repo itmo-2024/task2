@@ -1,0 +1,198 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    width: 210mm;
+    height: 297mm;
+    background-image: url("resources/images/background.jpg");
+    background-size: cover;
+    margin: auto;
+}
+
+.newspaper-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 3px;
+    position: relative;
+}
+
+.title-container {
+    text-align: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.title-container::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    width: 303px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+}
+
+.title-container::after {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+}
+
+.main-title {
+    font: 85px 'Mugglenews';
+}
+
+.color-letter {
+    color: #e87046;
+}
+
+.subtitle {
+    font: 10px 'Archive Lightface Extended';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.the {
+    font: 25px 'Phyton Script';
+    display: block;
+}
+
+.the::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    width: 295px;
+    height: 2px;
+    background-color: black;
+    right: 5px;
+}
+
+.content {
+    display: block;
+    position: relative;
+    margin: 0 10px 20px 10px;
+    border: 2px solid black;
+}
+
+.story {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.story-title {
+    position: relative;
+    text-align: right;
+    margin-top: 65px;
+    margin-right: 10px;
+    font: 48pt 'Champion Gothic';
+    text-transform: uppercase;
+    line-height: 125%;
+}
+
+.story-title-main-words {
+    display: block;
+    color: #e87046;
+    font-size: 55pt;
+}
+
+.story-text-first-column {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 125px;
+    text-align: justify;
+    font: 9px 'Ziggurat HTF';
+}
+
+.story-text-first-column::first-letter {
+    font-size: 30pt;
+    color: #e87046;
+}
+
+.story-text-second-column {
+    margin-left: 5px;
+    margin-top: 42px;
+    width: 125px;
+    text-align: justify;
+    font: 9px 'Ziggurat HTF';
+}
+
+.image-and-jokes {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+li {
+    margin: 10px;
+}
+
+.joke-title {
+    font: 35px 'Phyton Script';
+    text-align: center;
+    margin: 0;
+    color: #e87046;
+    font-weight: bold;
+}
+
+.joke-question {
+    font: 16px 'Wonderworld';
+    font-weight: bold;
+}
+
+.joke-answer {
+    font: 16px 'Adobe Garamond';
+}
+
+img {
+    margin: 10px;
+}
+
+.disclaimer {
+    display: block;
+    text-align: center;
+    font: 8px 'Archive Lightface Extended';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: 'Phyton Script';
+    src: url('resources/fonts/phyton-script.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mugglenews';
+    src: url('resources/fonts/mugglenews.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Archive Lightface Extended';
+    src: url('resources/fonts/archive-lightface-extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Champion Gothic';
+    src: url('resources/fonts/champion-gothic-middleweight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ziggurat HTF';
+    src: url('resources/fonts/ziggurat-htf-2.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Wonderworld';
+    src: url('resources/fonts/wonderworld.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Adobe Garamond';
+    src: url('resources/fonts/adobe-garamond-regular.otf') format('truetype');
+}
