@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+@font-face
+{
+    font-family: 'Redgar';
+    src: url('../fonts/Redgar.ttf.woff') format('woff'),
+    url('../fonts/Redgar.ttf.svg#Redgar') format('svg'),
+    url('../fonts/Redgar.ttf.eot'),
+    url('../fonts/Redgar.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@page
+{
+    size: A4;
+}
+
+.A4
+{
+    @media screen
+    {
+        width: 100%;
+        aspect-ratio: 210/297;
+    }
+    @media print
+    {
+        width: 210mm;
+        height: 297mm;
+    }
+    margin: auto;
+    background: url("/img/background.jpeg") no-repeat;
+    background-size: cover;
+}
+
+.main-header
+{
+    width: 100%;
+    display: flex;
+}
+
+.title
+{
+    width: 100%;
+}
+
+.main-container
+{
+    width: 96%;
+    height: 84%;
+    margin: 1.5%;
+}
+
+fieldset
+{
+    position: relative;
+    width: 93.5%;
+    height: 96.2%;
+    margin: auto;
+    border: 0.3vw solid black;
+
+    legend
+    {
+        font: 2vw "Protest Guerrilla", sans-serif;
+    }
+}
+
+.wrapper
+{
+    width: 100%;
+}
+
+.jokes-container
+{
+    float: left;
+    width: 24%;
+    height: 80%;
+}
+
+.jokes-header
+{
+    width: 100%;
+    text-align: center;
+
+    h1
+    {
+        margin: 5% auto;
+        width: 3.5em;
+        line-height: 1em;
+        background-color: black;
+        color: navajowhite;
+        font-size: 5.5vw;
+        text-shadow: 0.02em 0.02em darkgray,
+        0.04em 0.04em white;
+    }
+}
+
+.jokes-body
+{
+    width: 100%;
+}
+
+.joke
+{
+    width: 95%;
+    font-size: 1.5vw;
+    margin: 0 auto;
+
+    h1
+    {
+        line-height: 1em;
+        font-size: 2.4vw;
+    }
+
+    p
+    {
+        padding-bottom: 0.6em;
+        line-height: 1em;
+        border-bottom: 0.3vw solid black;
+
+        &::first-letter
+        {
+            color: red;
+            font-size: 3.5vw;
+        }
+    }
+}
+
+#joke-1
+{
+    font-family: "Acme", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#joke-2
+{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#joke-3
+{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#joke-4
+{
+    font-family: "Yatra One", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#joke-5
+{
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.headline-container
+{
+    float: right;
+    width: 74%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: 0;
+    border-left: 0.3vw solid black;
+}
+
+.headline-header
+{
+    width: 100%;
+    height: 30%;
+    font-size: 8.8vw;
+    text-align: center;
+    font-family: 'Redgar', serif;
+
+    h1
+    {
+        margin-top: 1.5%;
+        margin-bottom: auto;
+        position: static;
+        width: 100%;
+        line-height: 0.8em;
+    }
+}
+
+.headline-body
+{
+    width: 100%;
+    height: 70%;
+    font: 2.5vw "Pirata One", system-ui;
+    line-height: 1.15em;
+}
+
+.normal-headline-text,
+.headline-decoration-wrapper
+{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.normal-headline-text
+{
+    width: 98%;
+    height: 30%;
+    margin-bottom: 1%;
+
+    &::first-letter
+    {
+        color: red;
+    }
+}
+
+.headline-decoration-wrapper
+{
+    display: flex;
+    width: 98%;
+    border-bottom: 0.3vw solid black;
+}
+
+.headline-gif
+{
+    width: 60%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.rotated-headline-text
+{
+    width: 40%;
+    height: 11em;
+    writing-mode: vertical-rl;
+
+    &::first-letter
+    {
+        color: red;
+    }
+}
+
+.secondary-news
+{
+    float: right;
+    width: 74%;
+    margin-top: 2%;
+    height: max-content;
+    font: 1.4vw "Spicy Rice", serif;
+    display: flex;
+
+    p
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 2%;
+
+        &::first-letter
+        {
+            color: red;
+            font-weight: 700;
+            font-size: 2.4vw;
+            text-decoration: underline;
+        }
+    }
+}
+
+.nimbus-photo
+{
+    width: 36%;
+    height: 36%;
+}
+
+.page-logo
+{
+    transform: rotate(90deg);
+    position: absolute;
+    background-color: #ffba52;
+    margin-top: 1.4em;
+    width: 20%;
+    right: -3.7%;
+    left: auto;
+    margin-bottom: 3.7%;
+    bottom: 0;
+    height: max-content;
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5em;
+
+    *
+    {
+        margin: 0;
+        text-shadow: 0.05em 0.05em darkgray,
+        0.07em 0.07em lightgrey;
+    }
+
+    span
+    {
+        color: darkred;
+        text-shadow: 0.05em 0.05em brown,
+        0.07em 0.07em black;
+    }
+}
+
+footer
+{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.fine-words
+{
+    width: 40%;
+    height: 100%;
+    display: flex;
+
+    p
+    {
+        width: 40%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 11%;
+        font-size: 1.8vw;
+        font-family: "Holtwood One SC", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.pointing-hand
+{
+    width: 50%;
+    height: 50%;
+    margin-left: 2%;
+    margin-top: 11%;
+}
+
+.weather
+{
+    width: 20%;
+    height: 84%;
+    padding-top: 3%;
+    padding-left: 1%;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    ul
+    {
+        padding-left: 10%;
+        margin-top: 5%;
+
+        li
+        {
+            font-size: 1.2vw;
+        }
+    }
+
+    h2
+    {
+        margin-bottom: 0;
+        font-size: 2vw;
+        line-height: 1em;
+    }
+}
+
+.wheel
+{
+    width: 20%;
+}
+
+.zodiac-wheel
+{
+    width: 80%;
+    margin-top: 8%;
+    margin-left: 20%;
+    height: min-content;
+}
