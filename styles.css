@@ -27,7 +27,7 @@ body {
 .title-container::before {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 10px;
     width: 303px;
     height: 2px;
     background-color: black;
@@ -44,7 +44,7 @@ body {
 }
 
 .main-title {
-    font: 85px 'Mugglenews';
+    font: 85px "Mugglenews";
 }
 
 .color-letter {
@@ -52,20 +52,20 @@ body {
 }
 
 .subtitle {
-    font: 10px 'Archive Lightface Extended';
+    font: 10px "Archive Lightface Extended";
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .the {
-    font: 25px 'Phyton Script';
+    font: 19pt "Phyton Script";
     display: block;
 }
 
 .the::before {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 10px;
     width: 295px;
     height: 2px;
     background-color: black;
@@ -90,7 +90,7 @@ body {
     text-align: right;
     margin-top: 65px;
     margin-right: 10px;
-    font: 48pt 'Champion Gothic';
+    font: 48pt "Champion Gothic";
     text-transform: uppercase;
     line-height: 125%;
 }
@@ -106,7 +106,7 @@ body {
     margin-left: 10px;
     width: 125px;
     text-align: justify;
-    font: 9px 'Ziggurat HTF';
+    font-size: 8pt;
 }
 
 .story-text-first-column::first-letter {
@@ -116,10 +116,10 @@ body {
 
 .story-text-second-column {
     margin-left: 5px;
-    margin-top: 42px;
+    margin-top: 36px;
     width: 125px;
     text-align: justify;
-    font: 9px 'Ziggurat HTF';
+    font-size: 8pt;
 }
 
 .image-and-jokes {
@@ -134,7 +134,7 @@ li {
 }
 
 .joke-title {
-    font: 35px 'Phyton Script';
+    font: 26pt "Phyton Script";
     text-align: center;
     margin: 0;
     color: #e87046;
@@ -142,12 +142,12 @@ li {
 }
 
 .joke-question {
-    font: 16px 'Wonderworld';
+    font: 12pt "Wonderworld";
     font-weight: bold;
 }
 
 .joke-answer {
-    font: 16px 'Adobe Garamond';
+    font: 12pt "Adobe Garamond";
 }
 
 img {
@@ -157,42 +157,39 @@ img {
 .disclaimer {
     display: block;
     text-align: center;
-    font: 8px 'Archive Lightface Extended';
+    font: 6pt "Archive Lightface Extended";
+    line-height: 120%;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 @font-face {
-    font-family: 'Phyton Script';
-    src: url('resources/fonts/phyton-script.ttf') format('truetype');
+    font-family: "Phyton Script";
+    src: url("resources/fonts/phyton-script.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Mugglenews';
-    src: url('resources/fonts/mugglenews.ttf') format('truetype');
+    font-family: "Mugglenews";
+    src: url("resources/fonts/mugglenews.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Archive Lightface Extended';
-    src: url('resources/fonts/archive-lightface-extended.otf') format('truetype');
+    font-family: "Archive Lightface Extended";
+    src: url("resources/fonts/archive-lightface-extended.otf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Champion Gothic';
-    src: url('resources/fonts/champion-gothic-middleweight.ttf') format('truetype');
+    font-family: "Champion Gothic";
+    src: url("resources/fonts/champion-gothic-middleweight.ttf")
+    format("truetype");
 }
 
 @font-face {
-    font-family: 'Ziggurat HTF';
-    src: url('resources/fonts/ziggurat-htf-2.ttf') format('truetype');
+    font-family: "Wonderworld";
+    src: url("resources/fonts/wonderworld.otf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Wonderworld';
-    src: url('resources/fonts/wonderworld.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Adobe Garamond';
-    src: url('resources/fonts/adobe-garamond-regular.otf') format('truetype');
+    font-family: "Adobe Garamond";
+    src: url("resources/fonts/adobe-garamond-regular.otf") format("truetype");
 }
