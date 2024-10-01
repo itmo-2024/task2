@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyberpunk 2077 News</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        :root {
+            --main: #030913;
+            --mainlight: #010811;
+            --cyan: #f05fe9;
+            --border-width: 3px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            background-color: var(--main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .newspaper_container {
+            transform: skew(-15deg);
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+            rgba(240, 46, 170, 0.3) 10px 10px,
+            rgba(240, 46, 170, 0.2) 15px 15px,
+            rgba(240, 46, 170, 0.1) 20px 20px,
+            rgba(240, 46, 170, 0.05) 25px 25px,
+            rgba(240, 46, 170, 0.05) 30px 30px;
+            transition: all ease-in 0.8s;
+        }
+
+        .newspaper_container:hover {
+            transform: scale(1.05);
+            box-shadow: none;
+        }
+
+        .newspaper {
+            position: relative;
+            padding: 20px;
+            width: 400px;
+            background: var(--mainlight);
+            border-radius: 10px;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
+
+        .newspaper::before,
+        .newspaper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - var(--border-width) * 2);
+            height: calc(100% - var(--border-width) * 2);
+            border: var(--border-width) solid var(--cyan);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .newspaper::after {
+            z-index: 2;
+            opacity: 0;
+            animation: glitch 2s infinite;
+            mix-blend-mode: screen;
+        }
+
+        .newspaper:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes glitch {
+            10% {
+                clip: rect(10px, 9999px, 50px, 0);
+                transform: translate(-2px, -2px);
+            }
+            20% {
+                clip: rect(85px, 9999px, 140px, 0);
+                transform: translate(2px, -2px);
+            }
+            30% {
+                clip: rect(70px, 9999px, 80px, 0);
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                clip: rect(40px, 9999px, 90px, 0);
+                transform: translate(2px, 2px);
+            }
+            50% {
+                clip: rect(50px, 9999px, 60px, 0);
+                transform: translate(0, 0);
+            }
+            60% {
+                clip: rect(60px, 9999px, 70px, 0);
+                transform: translate(-2px, -2px);
+            }
+            70% {
+                clip: rect(20px, 9999px, 30px, 0);
+                transform: translate(2px, -2px);
+            }
+            80% {
+                clip: rect(90px, 9999px, 100px, 0);
+                transform: translate(-2px, 2px);
+            }
+            90% {
+                clip: rect(30px, 9999px, 40px, 0);
+                transform: translate(2px, 2px);
+            }
+        }
+
+        .news_logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo_container {
+            position: relative;
+            width: 200px;
+        }
+
+        .logo_container img {
+            width: 130%;
+            height: auto;
+            display: block;
+        }
+
+        .logo_color {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            opacity: 1;
+        }
+
+        .logo_gray {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 80% {
+                opacity: 0;
+            }
+            81%, 90% {
+                opacity: 1;
+            }
+            91%, 100% {
+                opacity: 0;
+            }
+        }
+
+        .news_logo small {
+            transform: rotate(-90deg);
+            margin-left: 50px;
+            color: azure;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid var(--cyan);
+            width: 100%;
+            animation: appear 5s forwards;
+        }
+
+        @keyframes appear {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .main_information {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .main_information p {
+            text-align: justify;
+            hyphens: auto;
+            margin-bottom: 1em;
+        }
+
+        .main_information p::first-letter {
+            font-size: 2em;
+            float: left;
+            line-height: 1;
+            margin-right: 5px;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+        }
+
+        blockquote {
+            font-style: italic;
+            font-size: 1em;
+            margin: 10px 0;
+            color: var(--cyan);
+        }
+
+        .image_container {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .image_container video {
+            width: 100%;
+            max-width: 100%;
+            animation: fadeInOut 5s infinite;
+        }
+
+        .image_container figcaption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.8em;
+            color: var(--cyan);
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+<div class="newspaper_container">
+    <div class="newspaper">
+        <div class="news_logo">
+            <div class="logo_container">
+                <img class="logo_color" src="img/Artboard%20352500.png" alt="Cyberpunk 2077 Logo">
+                <img class="logo_gray" src="img/Cyberpunk%20logo%20Resource.png" alt="Cyberpunk 2077 Logo Gray">
+            </div>
+            <small>NEWS</small>
+        </div>
+        <hr>
+        <div class="main_information">
+            <p>The long-awaited update for <strong>Cyberpunk 2077</strong>, titled <em>"Phantom Liberty"</em>, has finally been released, bringing numerous new features and storylines to the game. Players can immerse themselves in new adventures alongside well-known characters and explore previously undiscovered areas of Night City.</p>
+
+            <blockquote>"Phantom Liberty is a breath of fresh air for the Cyberpunk universe, offering an engaging storyline and improved gameplay."</blockquote>
+
+            <div class="image_container">
+                <video poster="https://www.cyberpunk.net/build/images/phantom-liberty/CP77_Phantom_Liberty_KV_16x9_RGB_no_PhL-0a5aaaf8.jpg" autoplay loop muted playsinline>
+                    <source src="https://cdn-l-cyberpunk.cdprojektred.com/video/CP2077_PhL_KV_Animation_1920x1080_AV1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+                    <source src="https://cdn-l-cyberpunk.cdprojektred.com/video/CP2077_PhL_KV_Animation_1920x1080_h264.mp4" type="video/mp4">
+                </video>
+                <figcaption>Poster for the "Phantom Liberty" update.</figcaption>
+            </div>
+
+            <p>Additionally, the developers have enhanced the game's performance and fixed numerous bugs, making the gaming experience even more enjoyable. The player community is actively discussing the new features and sharing their impressions.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
