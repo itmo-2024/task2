@@ -10,9 +10,10 @@
 <body>
 
 <div class="A4">
-    <button class="item">Change item</button>
+    <input type=checkbox id="item" class="item" title="Change item">
+    <label class="btn" for="item">Change item</label>
     <header class="name">
-        <img class="logo" src="img/big-logo.png" alt="logo"/>
+        <img class="logo" src="img/big-logo.png" alt="logo" width="500" height="591"/>
         <h1 class="newspaper-name">
             <span class="first-line">The</span>
             <span class="second-line">Daily Prophet</span>
@@ -25,14 +26,25 @@
         </section>
     </header>
     <nav class="weather">
-        <h1>Todays's weather</h1>
-        <h3>qwertyopo</h3>
-        <h2>North: rain & fog</h2>
-        <h2>East: sun</h2>
-        <h2>West: clouds</h2>
-        <h2>South: sun & rain</h2>
-        <h4>Zodiac signs</h4>
-        <img class="zodiac" src="img/zodiac.png" alt="zodiac" width="400" height="400" />
+        <dl>
+            <dt>Today's weather</dt>
+            <dd class="symbols">qwertyopo</dd>
+
+            <dt>North:</dt>
+            <dd>rain & fog</dd>
+
+            <dt>East:</dt>
+            <dd>sun</dd>
+
+            <dt>West:</dt>
+            <dd>clouds</dd>
+
+            <dt>South:</dt>
+            <dd>sun & rain</dd>
+
+            <dt>Zodiac signs:</dt>
+            <dd><img class="zodiac" src="img/zodiac.png" alt="zodiac" width="400" height="400" /></dd>
+        </dl>
     </nav>
     <section class="main">
         <div class="headline">
@@ -79,8 +91,8 @@
                 <li>Spice mix: cinnamon, cardamom, ground ginger</li>
             </ul>
         </h2>
+        <img class="cheers" src="img/cheers.gif" alt="cheers" width="320" height="180"/>
     </section>
-    <img class="cheers" src="img/cheers.gif" alt="cheers" width="320" height="180"/>
     <section class="hippo">
         <h1>
             <a href="#" class="href">Cute hippo!</a>
