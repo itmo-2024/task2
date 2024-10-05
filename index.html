@@ -8,63 +8,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section id="front-page">
+    <section>
       <header>
         <div class="my-header">
-          <div id="header-header">
-            <div id="left-header-text">
-              <p style="text-align: left">
-                26-е сентября 2024 <br />
-                Выпуск №123 <br />
-                Каждую неделю
-              </p>
-            </div>
-            <div id="header-center">
-              <h1>CSS-ГАЗЕТА</h1>
-            </div>
-            <div id="right-header-text">
-              <p style="text-align: right">
-                Новости спорта с.2 Для дачников с.4 Гороскоп с.5
-              </p>
-            </div>
+          <div class="header-side-text">
+            <p class="align-left">
+              26-е сентября 2024 <br />
+              Выпуск №123 <br />
+              Каждую неделю
+            </p>
+          </div>
+          <div class="header-center">
+            <h1>CSS-ГАЗЕТА</h1>
+          </div>
+          <div class="header-side-text">
+            <p class="align-right">
+              Новости спорта с.2<br />Для дачников с.4<br />Гороскоп с.5
+            </p>
           </div>
           <table>
             <tr>
-              <td style="text-align: left">Быт</td>
-              <td style="text-align: center">Культура</td>
-              <td style="text-align: right">Спорт</td>
+              <td class="align-left">Быт</td>
+              <td class="align-center">Культура</td>
+              <td class="align-right">Спорт</td>
             </tr>
           </table>
           <hr />
           <h2>НА ПАРНАСЕ ОБНАРУЖИЛИ ОЗЕРО</h2>
         </div>
       </header>
-      <div id="container1">
-        <div id="first-article">
-          <strong style="font-size: 20px; margin-top: -5px; margin-bottom: -5px"
-            ><q>Я не знал, что рядом с моим домом есть озеро</q></strong
-          >
+      <div class="container1">
+        <div class="first-article">
+          <strong><q>Я не знал, что рядом с моим домом есть озеро</q></strong>
 
-          <p style="text-align: justify; margin-top: -5px">
+          <p>
             На территории Парнаса, отведенной под застройку, в самой середине
             зарослей обнаружилось что-то среднее между большой лужей и озером.
             Местные жители увидели его на картах и решили проверить: оказалось,
             оно действительно существует и никто не знает, откуда оно взялось.
           </p>
         </div>
-        <div id="main-image">
-          <img
-            src="lake.jpg"
-            widht="100%"
-            height="80%"
-            alt="Озеро на Парнасе"
-          />
-          <p style="font-style: italic; margin-top: 0px; margin-left: 5px">
-            Озеро, сфотографированное редактором газеты
-          </p>
+        <div class="main-image">
+          <img src="lake.jpg" widht="400" height="330" alt="Озеро на Парнасе" />
+          <p>Озеро, сфотографированное редактором газеты</p>
         </div>
-        <div id="second-article">
-          <p style="text-align: justify; margin-top: -5px">
+        <div class="second-article">
+          <p>
             Оказалось, многие жители Парнаса давно знают про озеро и часто ходят
             к нему, чтобы отдохнуть на природе и пожарить шашлыков, не уезжая
             далеко от дома. Правда, чтобы попасть к нему, нужно пройти через
@@ -74,17 +63,17 @@
           </p>
         </div>
       </div>
-      <div id="container2">
-        <div id="vertical-header">
-          <p>Р<br />Е<br />Ц<br />Е<br />П<br />Т<br />Ы</p>
+      <div class="container2">
+        <div class="vertical-header">
+          <p>РЕЦЕПТЫ</p>
         </div>
 
-        <div id="smaller-image1">
-          <img src="broccoli.jpg" alt="broccoli" height="100%" width="100%" />
+        <div class="container-element-small">
+          <img src="broccoli.jpg" alt="broccoli" height="200" width="230" />
         </div>
-        <div id="third-article">
-          <h3 style="margin-top: 0px; margin-left: 5px">Жареное брокколи</h3>
-          <ul style="margin-top: 0px">
+        <div class="container-element-small">
+          <h3>Жареное брокколи</h3>
+          <ul>
             <li>Брокколи</li>
             <li>Подсолнечное масло</li>
             <li>Лимонный сок</li>
@@ -92,19 +81,19 @@
             <li>Соевый соус</li>
           </ul>
         </div>
-        <div id="fourth-article">
-          <p style="margin-top: 0px; margin-left: 5px; text-align: justify">
+        <div class="container-element-small">
+          <p>
             Вылейте масло на сковороду, подождите пока оно нагреется и выложите
             брокколи. Перемешивайте капусту и добавьте чеснок. После жарки
             вылейте в блюдо много лимонного сока и соевого соуса.
           </p>
         </div>
-        <div id="smaller-image2">
-          <img src="hryuchevo.jpg" alt="hryuchevo" height="100%" width="100%" />
+        <div class="container-element-small">
+          <img src="hryuchevo.jpg" alt="hryuchevo" height="200" width="230" />
         </div>
-        <div id="fifth-article">
-          <h3 style="margin-top: 0px; margin-left: 5px">Хрючево</h3>
-          <ul style="margin-top: 0px">
+        <div class="container-element-small">
+          <h3>Хрючево</h3>
+          <ul>
             <li>Яйца 2 шт.</li>
             <li>Подсолнечное масло</li>
             <li>Помидоры 2 шт.</li>
@@ -112,8 +101,8 @@
             <li>Сыр</li>
           </ul>
         </div>
-        <div id="sixth-article">
-          <p style="margin-top: 0px; margin-left: 5px; text-align: justify">
+        <div class="container-element-small">
+          <p>
             Разогрейте масло на сковороде и вылейте два яйца. Пока они не успели
             прожариться и обрести форму, начните их перемешивать. Добавьте
             нарезанные помидоры, ветчину и сыр.
@@ -122,15 +111,13 @@
       </div>
       <footer>
         <hr />
-        <div id="container3">
-          <div id="left-bottom-emoji">
-            <img src="emoji.jpg" width="100%" height="100%" />
+        <div class="container3">
+          <div class="bottom-emoji">
+            <img src="emoji.jpg" width="70" height="70" />
           </div>
-          <p style="margin-top: 0px; font-style: italic">
-            Редактор: Холодова Алиса <br />Спонсоры: тэг div
-          </p>
-          <div id="right-bottom-emoji">
-            <img src="emoji.jpg" width="100%" height="100%" />
+          <p>Редактор: Холодова Алиса <br />Спонсоры: тэг div</p>
+          <div class="bottom-emoji">
+            <img src="emoji.jpg" width="70" height="70" />
           </div>
         </div>
       </footer>
