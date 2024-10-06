@@ -1,0 +1,203 @@
+html {
+    min-width: 1000px;
+    --border-color: #4a4a4a;
+
+    background-color: whitesmoke;
+
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    margin-top: 10px;
+    border-bottom: 4px solid var(--border-color);
+}
+
+header .main {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .main .about {
+    width: 8rem;
+
+    margin: 10px;
+    padding: 5px;
+
+    border: 2px solid var(--border-color);
+
+    text-align: center;
+}
+
+header .main .about .title {
+    font-size: x-large;
+    text-align: center;
+}
+
+header .main .name {
+    width: 70%;
+    text-align: center;
+}
+
+header .main .name .title {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    border-bottom: 3px solid var(--border-color);
+
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+header .main .name .time {
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top: 2px solid var(--border-color);
+
+    font-size: 1.5rem;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+main .primary {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border-color);
+}
+
+main .primary .image figure {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+}
+
+main .primary .image {
+    margin: 10px 5px 0 5px;
+    padding: 5px;
+}
+
+main .primary .image img {
+    width: 39rem;
+}
+
+main .primary .text {
+    margin: 10px 5px 0 5px;
+}
+
+.text .description {
+    text-align: justify;
+}
+
+.double-article-left .article-left .text .description {
+    columns: 2;
+    column-gap: 25px;
+}
+
+.double-article-left .article-left .text .description {
+    margin-top: 10px;
+}
+
+.double-article-left .text figure {
+    float: left;
+    margin: 15px 10px 10px 0;
+}
+
+.double-article-left .text figure img {
+    width: 155px;
+}
+
+.text .caption {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#article-title {
+    font-style: oblique;
+
+    text-transform: uppercase;
+
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 0;
+}
+
+main .double-article-left {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+main .double-article-left .article-left {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 65%;
+
+    border-right: 2px dotted var(--border-color);
+}
+
+main .double-article-left .article-left .text {
+    display: flex;
+    justify-content: normal;
+}
+
+main .double-article-left .article-left .caption {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+
+    writing-mode: vertical-lr;
+    padding-right: 5px;
+}
+
+main .double-article-left .article-right {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 35%;
+}
+
+.text .description p::first-letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    float: left;
+    padding-right: 5px;
+    color: #8B4513;
+    line-height: 1;
+}
+
+blockquote {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #333;
+    border-left: 5px solid #8B4513;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    font-style: normal;
+    margin-top: 10px;
+}
+
