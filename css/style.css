@@ -19,6 +19,7 @@ body {
     padding: 1cm;
     display: flex;
     flex-direction: column;
+    background-color: blanchedalmond;
     background-image: url('/images/old-paper.jpg');
     background-size: cover;
     background-position: center;
@@ -31,13 +32,13 @@ body {
     position: relative;
 }
 
-.date {
+.publication-date {
     font-size: 1em;
     font-family: var(--news-font);
     position: absolute;
     top: 0;
     left: 0;
-    margin: 1cm; /* Отступ от краев */
+    margin: 1cm;
 }
 
 .logo {
@@ -60,17 +61,19 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-.content {
-    column-count: 2;
-    column-gap: 1cm;
-    flex-grow: 1;
-    overflow: hidden;
+.main-news {
+    float: left;
+}
+
+.electricity-news,
+.fun-stories {
+    float: right;
 }
 
 .main-news,
 .electricity-news,
-.additional-news,
 .fun-stories {
+    width: 47.5%;
     break-inside: avoid;
     margin-bottom: 0.5cm;
 }
@@ -149,3 +152,10 @@ body.hidden-text {
         transform: translateX(0);
     }
 }
+
+/*@media print {*/
+/*    .A4 {*/
+/*        width: 21cm;*/
+/*        height: 29.7cm;*/
+/*    }*/
+/*}*/
