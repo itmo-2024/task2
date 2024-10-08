@@ -4,9 +4,7 @@ html {
 }
 
 .newspaper {
-    background: url("resources/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: no-repeat  url("resources/background.jpg") center/cover ;
 }
 
 .logo-container {
@@ -72,7 +70,7 @@ main section {
 }
 
 main header {
-    width: 52%;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,9 +78,13 @@ main header {
 
 
 .robot-combat div, .robot-concierge div, .robot-combat p, .robot-concierge p {
-    width: 14%;
-    margin: 1%;
+    width: 140px;
+    margin:10px;
 }
+.robot-combat div p, .robot-concierge div p {
+    margin:0px;
+}
+
 
 .robot-combat p, .robot-concierge p {
     background: rgba(0, 0, 0, 0.1);
@@ -357,7 +359,7 @@ q:hover {
 main h2 {
     overflow: hidden;
     animation: font-and-size-change 1s infinite ease-in-out;
-    font-size: 70px;
+    font-size: 50px;
 
 }
 
