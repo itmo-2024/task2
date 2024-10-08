@@ -1,0 +1,181 @@
+
+@font-face {
+    font-family: "Mystery Quest";
+    src: url("/fonts/MysteryQuest-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Bondon";
+    src: url("/fonts/Bonbon-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Satyr SP";
+    src: url("/fonts/SatyrSP.otf");
+}
+
+@font-face {
+    font-family: "Macondo";
+    src: url("/fonts/MacondoSwashCaps-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Barocco";
+    src: url("/fonts/Barocco\ Initial_0.ttf");
+}
+
+@font-face {
+    font-family: "Magnolia";
+    src: url("/fonts/Magnolia\ Script.otf");
+}
+
+@font-face {
+    font-family: "Fortunata";
+    src: url("/fonts/fortunatacyr.ttf");
+}
+
+body {
+    background-color: burlywood;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 5em;
+    font-family: "Satyr SP", sans-serif;
+}
+
+hr {
+    border-color: black;
+}
+
+span.today {
+    position: relative;
+    bottom: 0.5em;
+    font-size: 2.5em;
+    right: 2%;
+    font-family: "Barocco", sans-serif;
+}
+
+span.weather {
+    margin: 0, 10%;
+    font-family: "Macondo", sans-serif;
+}
+
+img.logo_left {
+    float: left;
+}
+
+img.logo_right {
+    float: right;
+}
+
+img.zodiac {
+    position: relative;
+    top: 0.5em;
+    left: 2%;
+}
+
+div h1 {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    clear: both;
+}
+
+header div {
+    display: inline-block;
+}
+
+header pre {
+    margin: 0.2em 0;
+}
+
+article.sport div {
+    float: left;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    margin: 3px 5px 0;
+    letter-spacing: 0.2em;
+    background: black;
+    color: aliceblue;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+
+article {
+    border: 1px solid black;
+    float: left;
+    width: 25%;
+    margin: 2%;
+    font-family: "Magnolia", sans-serif;
+}
+
+article.sport,
+article.style_magic,
+article.shop {
+    float: none;
+    width: 100%;
+}
+
+article.music {
+    /* position: absolute;
+    margin-left: 33%;
+    margin-top: 43%;
+    padding-top: 3%;
+    width: 23%; */
+    float: left;
+}
+
+img.garry {
+    float: left;
+    margin: 1%;
+    height: 10%;
+    width: 25%;
+}
+
+img.dumbldore {
+    float: right;
+    height: 10%;
+    width: 27%;
+    margin-right: 6%;
+}
+
+img.dumb {
+    height: 10%;
+    width: 130%;
+}
+
+article.style_spell {
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 36%;
+    padding-top: 1%;
+    width: 23%;
+    text-align: center;
+    font-size: 2.7em;
+    letter-spacing: 0.3em;
+    font-family: 'Bondon', sans-serif;
+}
+
+article.style_charm {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 2.7em;
+    width: 50px;
+    font-family: 'Bondon', sans-serif;
+}
+
+article.style_magic {
+    text-align: center;
+    font-size: 2.7em;
+}
+
+
+hr.end {
+    clear: both;
+}
