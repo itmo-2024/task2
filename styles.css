@@ -1,55 +1,57 @@
-
-@font-face {
-    font-family: "Mystery Quest";
-    src: url("/fonts/MysteryQuest-Regular.ttf");
-}
-
-@font-face {
+@font-face 
+{
     font-family: "Bondon";
     src: url("/fonts/Bonbon-Regular.ttf");
 }
-
-@font-face {
+  
+@font-face 
+{
     font-family: "Satyr SP";
     src: url("/fonts/SatyrSP.otf");
 }
 
-@font-face {
+@font-face 
+{
     font-family: "Macondo";
     src: url("/fonts/MacondoSwashCaps-Regular.ttf");
 }
 
-@font-face {
+@font-face 
+{
     font-family: "Barocco";
-    src: url("/fonts/Barocco\ Initial_0.ttf");
+    src: url("/fonts/Barocco\ Initial-0.ttf");
 }
 
-@font-face {
+@font-face 
+{
     font-family: "Magnolia";
     src: url("/fonts/Magnolia\ Script.otf");
 }
 
-@font-face {
+@font-face 
+{
     font-family: "Fortunata";
     src: url("/fonts/fortunatacyr.ttf");
 }
 
-body {
+body 
+{
     background-color: burlywood;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
-h1 {
+h1 
+{
     font-size: 5em;
     font-family: "Satyr SP", sans-serif;
 }
 
-hr {
+hr 
+{
     border-color: black;
 }
 
-span.today {
+span.today 
+{
     position: relative;
     bottom: 0.5em;
     font-size: 2.5em;
@@ -57,43 +59,52 @@ span.today {
     font-family: "Barocco", sans-serif;
 }
 
-span.weather {
+span.weather 
+{
     margin: 0, 10%;
     font-family: "Macondo", sans-serif;
 }
 
-img.logo_left {
+img.logo-left 
+{
     float: left;
 }
 
-img.logo_right {
+img.logo-right 
+{
     float: right;
 }
 
-img.zodiac {
+img.zodiac 
+{
     position: relative;
     top: 0.5em;
     left: 2%;
 }
 
-div h1 {
+div h1 
+{
     text-align: center;
 }
 
-header {
+header 
+{
     text-align: center;
     clear: both;
 }
 
-header div {
+header div 
+{
     display: inline-block;
 }
 
-header pre {
+header pre 
+{
     margin: 0.2em 0;
 }
 
-article.sport div {
+article.sport div 
+{
     float: left;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -106,76 +117,98 @@ article.sport div {
     padding-top: 10px;
 }
 
-
-article {
-    border: 1px solid black;
+article 
+{
     float: left;
-    width: 25%;
-    margin: 2%;
+    width: 33%;
+    margin: 1%;
     font-family: "Magnolia", sans-serif;
 }
 
-article.sport,
-article.style_magic,
-article.shop {
+article.art-hagrid 
+{
+    width: 32%;
+}
+
+article.hagrid 
+{
     float: none;
     width: 100%;
 }
 
-article.music {
-    /* position: absolute;
-    margin-left: 33%;
-    margin-top: 43%;
-    padding-top: 3%;
-    width: 23%; */
-    float: left;
+article.sport,
+article.music 
+{
+    float: none;
+    width: 100%;
 }
 
-img.garry {
+article.shop 
+{
+    width: 100%;
+}
+
+article.shop::first-letter,
+article.music::first-letter,
+article.hagrid::first-letter 
+{
+    font-family: "Fortunata", sans-serif;
+    font-size: 6em;
+    float: left;
+    margin: 0 3% -20px 0;
+}
+
+article.art-garry 
+{
+    height: 10%;
+    width: 28%;
+    margin-right: 0;
+}
+
+img.garry 
+{
     float: left;
     margin: 1%;
-    height: 10%;
-    width: 25%;
+    height: 1%;
+    width: 93%;
 }
 
-img.dumbldore {
+img.dumbldore 
+{
     float: right;
-    height: 10%;
-    width: 27%;
-    margin-right: 6%;
+    height: 1%;
+    width: 30%;
+    margin: 2% 3% 2% 0;
 }
 
-img.dumb {
-    height: 10%;
-    width: 130%;
+img.dumb 
+{
+    height: 1%;
+    width: 100%;
+    margin: 3% 0;
 }
 
-article.style_spell {
-    position: absolute;
-    margin-left: 27%;
-    margin-top: 36%;
-    padding-top: 1%;
-    width: 23%;
+article.style-spell 
+{
+    width: 100%;
     text-align: center;
-    font-size: 2.7em;
+    margin-top: 12%;
+    font-size: 350%;
     letter-spacing: 0.3em;
-    font-family: 'Bondon', sans-serif;
+    font-family: "Bondon", sans-serif;
 }
 
-article.style_charm {
+article.style-charm 
+{
     writing-mode: vertical-lr;
     text-orientation: upright;
-    font-size: 2.7em;
+    font-size: 300%;
     width: 50px;
-    font-family: 'Bondon', sans-serif;
+    font-family: "Bondon", sans-serif;
+    margin: 0 5% 5% 0;
 }
 
-article.style_magic {
-    text-align: center;
-    font-size: 2.7em;
-}
-
-
-hr.end {
+hr.end 
+{
     clear: both;
 }
