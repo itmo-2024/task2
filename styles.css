@@ -1,0 +1,214 @@
+@font-face 
+{
+    font-family: "Bondon";
+    src: url("/fonts/Bonbon-Regular.ttf");
+}
+  
+@font-face 
+{
+    font-family: "Satyr SP";
+    src: url("/fonts/SatyrSP.otf");
+}
+
+@font-face 
+{
+    font-family: "Macondo";
+    src: url("/fonts/MacondoSwashCaps-Regular.ttf");
+}
+
+@font-face 
+{
+    font-family: "Barocco";
+    src: url("/fonts/Barocco\ Initial-0.ttf");
+}
+
+@font-face 
+{
+    font-family: "Magnolia";
+    src: url("/fonts/Magnolia\ Script.otf");
+}
+
+@font-face 
+{
+    font-family: "Fortunata";
+    src: url("/fonts/fortunatacyr.ttf");
+}
+
+body 
+{
+    background-color: burlywood;
+}
+
+h1 
+{
+    font-size: 5em;
+    font-family: "Satyr SP", sans-serif;
+}
+
+hr 
+{
+    border-color: black;
+}
+
+span.today 
+{
+    position: relative;
+    bottom: 0.5em;
+    font-size: 2.5em;
+    right: 2%;
+    font-family: "Barocco", sans-serif;
+}
+
+span.weather 
+{
+    margin: 0, 10%;
+    font-family: "Macondo", sans-serif;
+}
+
+img.logo-left 
+{
+    float: left;
+}
+
+img.logo-right 
+{
+    float: right;
+}
+
+img.zodiac 
+{
+    position: relative;
+    top: 0.5em;
+    left: 2%;
+}
+
+div h1 
+{
+    text-align: center;
+}
+
+header 
+{
+    text-align: center;
+    clear: both;
+}
+
+header div 
+{
+    display: inline-block;
+}
+
+header pre 
+{
+    margin: 0.2em 0;
+}
+
+article.sport div 
+{
+    float: left;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    margin: 3px 5px 0;
+    letter-spacing: 0.2em;
+    background: black;
+    color: aliceblue;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+article 
+{
+    float: left;
+    width: 33%;
+    margin: 1%;
+    font-family: "Magnolia", sans-serif;
+}
+
+article.art-hagrid 
+{
+    width: 32%;
+}
+
+article.hagrid 
+{
+    float: none;
+    width: 100%;
+}
+
+article.sport,
+article.music 
+{
+    float: none;
+    width: 100%;
+}
+
+article.shop 
+{
+    width: 100%;
+}
+
+article.shop::first-letter,
+article.music::first-letter,
+article.hagrid::first-letter 
+{
+    font-family: "Fortunata", sans-serif;
+    font-size: 6em;
+    float: left;
+    margin: 0 3% -20px 0;
+}
+
+article.art-garry 
+{
+    height: 10%;
+    width: 28%;
+    margin-right: 0;
+}
+
+img.garry 
+{
+    float: left;
+    margin: 1%;
+    height: 1%;
+    width: 93%;
+}
+
+img.dumbldore 
+{
+    float: right;
+    height: 1%;
+    width: 30%;
+    margin: 2% 3% 2% 0;
+}
+
+img.dumb 
+{
+    height: 1%;
+    width: 100%;
+    margin: 3% 0;
+}
+
+article.style-spell 
+{
+    width: 100%;
+    text-align: center;
+    margin-top: 12%;
+    font-size: 350%;
+    letter-spacing: 0.3em;
+    font-family: "Bondon", sans-serif;
+}
+
+article.style-charm 
+{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 300%;
+    width: 50px;
+    font-family: "Bondon", sans-serif;
+    margin: 0 5% 5% 0;
+}
+
+hr.end 
+{
+    clear: both;
+}
