@@ -192,3 +192,16 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media print {
+  section {
+    width: 210mm;
+    height: 297mm;
+  }
+  .container1 {
+    height: 35%;
+  }
+  .container2 {
+    height: 35%;
+  }
+}
