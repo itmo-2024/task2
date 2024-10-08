@@ -57,15 +57,15 @@ section {
   width: 33.33%;
 }
 
-.align-left {
+.left-element {
   text-align: left;
 }
 
-.align-center {
+.center-element {
   text-align: center;
 }
 
-.align-right {
+.right-element {
   text-align: right;
 }
 
