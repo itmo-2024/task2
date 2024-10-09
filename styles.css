@@ -1,67 +1,95 @@
 @page {
     size: A4;
     margin: 10mm;
-  }
-  
-  @media print {
-    html, body {
-      width: 210mm;
-      height: 297mm;
-    }
-  }
+}
 
-  header {
+@media print {
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+header {
     position: relative;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 50px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     border: 5px solid black;
     background-color: #f8f8f8;
 }
 
-header::before, header::after {
+header::before,
+header::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: -20px;
     bottom: -20px;
     left: -20px;
     right: -20px;
     border: 10px solid black;
     z-index: -1;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+    background: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        violet
+    );
 }
 
+html,
+body {
+    background: url("images/book.jpg") no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
+}
 
-body{
-    background-color:blanchedalmond;
+.container {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .page {
-    width: 210mm; 
-    height: 297mm; 
-    background: url('images/book.jpg') no-repeat center;
-    background-size:contain;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
     position: relative;
-    padding: 40px;
     z-index: 0;
+    box-sizing: border-box;
 }
 
-.content{
-    text-align: center;
-    z-index: 1;
+.allNews {
+    column-count: 3;
+    column-gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.news1,
+.news2 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+img.photo,
+img.photo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.for_footer,
+.footer {
     display: flex;
-    flex-direction: column;
-}
-
-ol{
-    font-size: 20px;
-}
-
-.for_footer{
-    display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -86,147 +114,118 @@ ol{
 
 .select input {
     display: none;
-  }
-  
-#text
-{
-  position: absolute;
-  display: block;
-  top: 0;
-  padding-left: 10px;
 }
 
-.select
-{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 160px;
-  height: 34px;
-  line-height: 30px;
-  position: relative;
-  
+#text {
+    position: absolute;
+    display: block;
+    top: 0;
+    padding-left: 10px;
 }
 
-.select:before
-{
-  content: ">";
-  display: inline-block;
-  background: white;
-  position: absolute;
-  right: -5px;
-  top: 2px;
-  z-index: 2;
-  width: 30px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  border: 2px solid #ddd;
-  transform: rotate(90deg);
-  cursor: pointer;
+.select {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 34px;
+    line-height: 30px;
+    position: relative;
 }
 
-.select input[name="list"]:not(:checked) ~ #text
-{
-  color: black;
-  background: white;
+.select:before {
+    content: ">";
+    display: inline-block;
+    background: white;
+    position: absolute;
+    right: -5px;
+    top: 2px;
+    z-index: 2;
+    width: 30px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    border: 2px solid #ddd;
+    transform: rotate(90deg);
+    cursor: pointer;
 }
 
-.select input[name="list"]:checked ~ #text
-{
-  background: transparent;
-  color: transparent;
-  z-index: 2;
+.select input[name="list"]:not(:checked) ~ #text {
+    color: black;
+    background: white;
 }
 
-
-.items
-{
-  display: block;
-  min-height: 30px;
-  position: absolute;
-  border: 2px solid #ddd;
-  overflow: hidden;
-  width: 160px;
-  cursor: pointer;
+.select input[name="list"]:checked ~ #text {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
 }
 
-#select:not(:checked) ~ .items
-{
-  height: 30px;
+.items {
+    display: block;
+    min-height: 30px;
+    position: absolute;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    width: 160px;
+    cursor: pointer;
 }
 
-.items label
-{
-  border-top: 2px solid #ddd;
-  padding-left: 10px;
-  background: white;
+#select:not(:checked) ~ .items {
+    height: 30px;
 }
 
-.items label:hover
-{
-  background: #eee;
-  cursor: pointer;
+.items label {
+    border-top: 2px solid #ddd;
+    padding-left: 10px;
+    background: white;
 }
 
-#select:checked ~ .items
-{
-  padding-top: 30px;
+.items label:hover {
+    background: #eee;
+    cursor: pointer;
 }
 
-#select:checked ~ .items label
-{
-  display: block;
+#select:checked ~ .items {
+    padding-top: 30px;
 }
 
-.items input:checked + label
-{
-  display: block!important;
-  border: none;
-  background: white;
+#select:checked ~ .items label {
+    display: block;
 }
 
+.items input:checked + label {
+    display: block !important;
+    border: none;
+    background: white;
+}
 
-.customletter{
+.customletter {
     color: brown;
-    font-size: 2em;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
-.news1{
-    column-count: 3;
-    column-gap: 30px;
-    padding: 100px;
-    text-align: justify;
-}
-
-.photo{
+.photo {
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
 }
 
 .highlight {
-    font-family: 'Comic Sans MS', cursive;
+    /* font-family: 'Comic Sans MS', cursive; */
     color: darkgreen;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
-.quote{
-  font-style: italic;
-  padding: 30px;
-  font-size: 1.2em;
-  color: purple;
+.quote {
+    /* font-style: italic; */
+    padding: 30px;
+    color: purple;
 }
 
-.news2{
-  padding: 60px;
-  text-align: justify;
-}
-
-.photo1{
-  display: block;
-  margin-left: auto;
-  margin-right: auto 
+.photo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
