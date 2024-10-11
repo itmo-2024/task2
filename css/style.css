@@ -13,8 +13,7 @@ body {
 }
 
 .A4 {
-    width: 21cm;
-    height: 29.7cm;
+    font-size: 1.6em;
     margin: auto;
     padding: 1cm;
     display: flex;
@@ -39,6 +38,11 @@ body {
     top: 0;
     left: 0;
     margin: 1cm;
+}
+
+.publication-date::before {
+    content: "вторник";
+    display: block;
 }
 
 .logo {
@@ -153,9 +157,10 @@ body.hidden-text {
     }
 }
 
-/*@media print {*/
-/*    .A4 {*/
-/*        width: 21cm;*/
-/*        height: 29.7cm;*/
-/*    }*/
-/*}*/
+@media print {
+    .A4 {
+        width: 21cm;
+        height: 29.7cm;
+        font-size: 1em;
+    }
+}
