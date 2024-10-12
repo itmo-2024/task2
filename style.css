@@ -1,40 +1,42 @@
 html {
-    width: 1250px;
+    width: 1140px;
     margin: 0 auto;
 }
 
 .newspaper {
     background: no-repeat  url("resources/background.jpg") center/cover ;
-}
+    height: 1440px;
 
+}
 .logo-container {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-header {
     display: flex;
     margin: 10px;
+    height: 130px;
 }
 
 .logo-container img {
-    display: flex;
-    width: inherit;
+    height: 130px;
+    width: 600px;
 }
 
 .text-overlay {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 5px;
+    font-size: 60px;
+    width: 200px;
+    margin: 10px;
     animation: blink 5s infinite ease-in-out;
 }
 
 
 .subheader {
-    height: 120px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.2);
@@ -42,6 +44,7 @@ html {
 
 .subheader img {
     width: 100px;
+    height: 90px;
 }
 
 .subheader h1 {
@@ -144,29 +147,32 @@ main .paragraph-with-figure p {
 }
 
 .content aside {
-    display: block;
     background: rgba(0, 0, 0, 0.1);
-    height: 100%;
+    height: 790px;
+    width: 260px;
     margin: 10px;
 }
 
 .content aside section {
     background: rgba(0, 0, 0, 0.1);
-    margin: 5%;
-    width: 90%;
-    height: 50%;
+    margin: 5px;
+    width: auto;
 }
 
 .content aside section p {
-    margin: 5%;
-    width: 90%;
+    margin: 5px;
 }
 
 .content aside header {
     background: rgba(0, 0, 0, 0.1);
+}
+.content aside .anecdote {
+    height: 140px;
 
 }
-
+.share-prices {
+    width: auto;
+}
 .share-prices, .quote {
     display: block;
 }
@@ -176,24 +182,24 @@ main .paragraph-with-figure p {
 }
 
 .share-prices img {
-    height: 20px
+    height: 20px;
+    width: 20px;
 }
 
 .share-prices table {
-    width: 100%;
     text-align: center;
 }
 
 .calendar img {
-    width: 200px;
-    margin: 10px;
+    width: 240px;
+    height: 240px;
+    margin: 5px;
 }
 
 .advertisement {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 100%;
     height: auto;
 }
 
@@ -220,8 +226,7 @@ main .paragraph-with-figure p {
 }
 
 .advertisement div figure img {
-    width: 80%;
-    height: auto;
+    height: 80px;
 }
 
 
@@ -230,15 +235,6 @@ main .paragraph-with-figure p {
     color: #333;
     line-height: 1.4;
     margin-top: 10px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-}
-
-footer img {
-    height: 100px;
 }
 
 
@@ -383,11 +379,19 @@ main h2 {
 }
 
 
+.hidden-robot {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
 .hidden-robot img {
-    display: flex;
+    display: block;
     height: 100px;
     width: 100px;
     opacity: 0;
+    margin: 0 auto;
     animation: fly 5s infinite ease-in-out;
 }
 
@@ -395,18 +399,16 @@ main h2 {
     opacity: 1;
 }
 
-.hidden-robot {
-    width: 300px;
-    margin: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    text-align: center;
-
-}
-
 .hidden-robot p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 30px;
+    color: black;
+    z-index: 0;
+    margin: 0;
 }
-
 @keyframes fly {
     0% {
         transform: translate(0, 0);
