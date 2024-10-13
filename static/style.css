@@ -115,9 +115,6 @@ main .primary .text {
     margin: 15px 10px 10px 0;
 }
 
-.double-article-left .text figure img {
-    width: 155px;
-}
 
 .text .caption {
     font-size: x-large;
@@ -125,7 +122,7 @@ main .primary .text {
     text-align: center;
 }
 
-#article-title {
+main .main-article-title {
     font-style: oblique;
 
     text-transform: uppercase;
