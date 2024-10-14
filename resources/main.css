@@ -67,7 +67,7 @@ p::first-letter {
     column-count: 2;
 }
 
-.p-header {
+.sub-question {
     font-weight: bold;
 }
 
@@ -82,11 +82,27 @@ q {
 
 @media print {
     @page {
-        size: auto;
+        size: A4;
         margin: 3mm 5mm;
     }
     body  {
         margin: 0;
         border: 1px solid black;
+    }
+    header video {
+        display: none;
+    }
+    header h1 {
+        float: none;
+        margin: .5rem 0 .2rem .5rem;
+    }
+    article h2 {
+        font-size: 10pt;
+    }
+    .wrap-right {
+        align-self: start;
+    }
+    .wrap-left {
+        align-self: start;
     }
 }
