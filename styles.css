@@ -12,12 +12,12 @@ header
     overflow: hidden;
 }
 
-.header-image-left
+.float-left
 {
     float: left;
 }
 
-.header-image-right
+.float-right
 {
     float: right;
 }
@@ -60,16 +60,6 @@ header
     position: relative;
 }
 
-.running-text-container-left
-{
-    float: left;
-}
-
-.running-text-container-right
-{
-    float: right;
-}
-
 .running-text
 {
     font-size: 2em;
@@ -97,28 +87,38 @@ header
 
 @keyframes scroll-up
 {
-    0% {
+    0%
+    {
         top: 100%;
         opacity: 0;
     }
-    10% {
+
+    10%
+    {
         opacity: 1;
     }
-    100% {
+
+    100%
+    {
         top: -100%;
     }
 }
 
 @keyframes scroll-down
 {
-    0% {
+    0%
+    {
         top: -100%;
         opacity: 0;
     }
-    10% {
+
+    10%
+    {
         opacity: 1;
     }
-    100% {
+
+    100%
+    {
         top: 100%;
     }
 }
@@ -170,11 +170,6 @@ header
     grid-column: 2 / span 2;
 }
 
-.article-check
-{
-    grid-column: 2 / span 2;
-}
-
 .gif-beer img
 {
     width: 100%;
@@ -212,11 +207,14 @@ header
 
 @keyframes fall
 {
-    0% {
+    0%
+    {
         transform: translateY(0) rotate(0deg);
         opacity: 0.8;
     }
-    100% {
+
+    100%
+    {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0.1;
     }
