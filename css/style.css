@@ -86,13 +86,12 @@
     margin-top: 300px;
 }
 
-
 @media screen
 {
     .A4
     {
-        transform: scale(0.3);
-        transform-origin: 300px 50px;
+        transform: scale(0.52);
+        transform-origin: 5px 5px;
     }
 }
 
@@ -100,7 +99,7 @@
 {
     .A4
     {
-        .item
+        .btn
         {
             display: none;
         }
@@ -153,36 +152,36 @@
     font-size: 20px;
 }
 
-.name,
-.play-news,
-.weather,
-.main,
-.halloween,
-.sec,
-.drink,
-.col-first,
-.col-second,
-h1,
-h2,
-h3,
-p,
-li,
-table,
-tr,
-td,
-img
-{
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-}
+/*.name,*/
+/*.play-news,*/
+/*.weather,*/
+/*.main,*/
+/*.halloween,*/
+/*.sec,*/
+/*.drink,*/
+/*.col-first,*/
+/*.col-second,*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*p,*/
+/*li,*/
+/*table,*/
+/*tr,*/
+/*td,*/
+/*img*/
+/*{*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.5s ease-in-out;*/
+/*    -webkit-transition: opacity 0.5s ease-in-out;*/
+/*    -moz-transition: opacity 0.5s ease-in-out;*/
+/*    -ms-transition: opacity 0.5s ease-in-out;*/
+/*}*/
 
-.A4:hover *
-{
-    opacity: 1;
-}
+/*.A4:hover **/
+/*{*/
+/*    opacity: 1;*/
+/*}*/
 
 @media print
 {
@@ -498,4 +497,227 @@ dd.symbols
 .col-two::first-letter
 {
     font: bold 90px var(--main-news);
+}
+
+@media screen and (max-width: 900px)
+{
+    .A4
+    {
+        width: 1500px;
+        height: 2000px;
+    }
+
+    .logo
+    {
+        width: 250px;
+        height: 250px;
+    }
+
+    .newspaper-name
+    {
+        margin-top: -40px;
+        line-height: 2px;
+        margin-left: -90px;
+
+        .second-line
+        {
+            margin-left: 200px;
+        }
+    }
+
+    .first-line,
+    .second-line,
+    .third-line
+    {
+        font-size: 150%;
+    }
+
+    .btn
+    {
+        width: 200px;
+        height: 10px;
+        font-size: 30px;
+    }
+
+    .main
+    {
+        margin-left: 10px;
+        width: 50%;
+    }
+
+    .main h2
+    {
+        font-size: 50px;
+    }
+
+    .headline
+    {
+        & h1
+        {
+            font-size: 50px;
+        }
+
+        .super
+        {
+            width: 1px;
+        }
+    }
+
+    .video
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    .halloween
+    {
+        display: flex;
+        align-items: flex-start;
+        font-size: 21px;
+
+        .col-first
+        {
+            order: -1;
+            width: 700px;
+            margin-right: -15px;
+        }
+
+        .col-second
+        {
+            order: 0;
+            width: 700px;
+            margin-right: -15px;
+        }
+
+        .video
+        {
+            order: 1;
+            margin-right: -15px;
+        }
+
+        .col-first:first-letter,
+        .col-second:first-letter
+        {
+            font-size: 30px;
+        }
+    }
+
+    .witch
+    {
+        height: 100px;
+        width: 100px;
+    }
+
+    .play-news
+    {
+        margin-left: 1050px;
+        margin-top: -30px;
+
+        & h1
+        {
+            font-size: 2px;
+        }
+
+        & h2
+        {
+            font-size: 20px;
+            margin-left: 200px;
+        }
+    }
+
+    .play-news h1,
+    .play-news h2
+    {
+        font-size: 30px;
+    }
+
+    .weather
+    {
+        margin-right: 60px;
+
+        .zodiac
+        {
+            margin-top: -20px;
+            margin-left: 200px;
+            height: 300px;
+            width: 300px;
+        }
+
+    }
+
+    .weather dt,
+    .weather dd
+    {
+        width: 500px;
+        font-size: 30px;
+    }
+
+    dd.symbols
+    {
+        font-size: 70px;
+    }
+
+    .joke h1
+    {
+        font-size: 30px;
+        line-height: 25px;
+        order: -1
+    }
+
+    .dance
+    {
+        order: 0;
+        height: 180px;
+    }
+
+    .hippo h1
+    {
+        font-size: 100px;
+    }
+
+    .hippo-news
+    {
+        font-size: 30px;
+        margin-top: -100px;
+    }
+
+    .drink
+    {
+        width: 600px;
+        height: 400px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .cheers
+    {
+        border-radius: 10px;
+    }
+
+    .drink h1,
+    .drink h2
+    {
+        font-size: 34px;
+    }
+
+    .drink h1:first-letter
+    {
+        font-size: 40px;
+    }
+
+    .marquee-container
+    {
+        margin-top: -30px;
+    }
+
+    .marquee
+    {
+        font-size: 50px;
+    }
+
+    .marquee-container
+    {
+        width: 1400px;
+        margin-left: 50px;
+    }
 }
