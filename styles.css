@@ -1,0 +1,171 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fdf3c7;
+  margin: 0;
+  padding: 10px;
+  max-width: 900px;
+  margin: auto;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #f9dd7a;
+  padding: 5px;
+  border-bottom: 3px solid #dba40f;
+}
+
+header h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2em;
+  margin: 0;
+  color: #d91e18;
+}
+
+header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  color: #333;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4em;
+  color: #d91e18;
+  margin-bottom: 10px;
+}
+
+.article-text {
+  column-count: 2;
+  column-gap: 20px;
+  text-align: justify;
+  font-size: 0.9em;
+  line-height: 1.4;
+  hyphens: auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+  line-height: 1;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  transform: rotate(180deg);
+}
+
+blockquote {
+  font-size: 1em;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-left: 3px solid #ff6347;
+  margin: 15px 0;
+  padding: 10px;
+  break-inside: avoid;
+}
+
+.image-container {
+  break-inside: avoid;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 70%;
+  height: auto;
+  border: 2px solid #dba40f;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.magic-image.move {
+  animation: moveHorizontally 4s linear infinite alternate;
+}
+
+@keyframes moveHorizontally {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+
+.magic-image.fade {
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 5mm;
+}
+
+.joke-section {
+  background-color: #ffebcd;
+  border: 2px solid #deb887;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.joke-section h3 {
+  color: #8b4513;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.joke-text {
+  font-size: 1em;
+  font-style: italic;
+  margin: 0;
+}
+
+@media print {
+  body {
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  header h2 {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .article-text {
+    column-count: 2;
+    column-gap: 10px;
+    font-size: 0.8em;
+  }
+
+  .image-container img {
+    max-width: 60%;
+  }
+}
