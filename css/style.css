@@ -36,7 +36,7 @@
     height: 100cm;
     margin: auto;
     border: 10px solid saddlebrown;
-    background-image: url("../img/paper.jpg");
+    background-image: url("../img/paper-small.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -152,36 +152,36 @@
     font-size: 20px;
 }
 
-/*.name,*/
-/*.play-news,*/
-/*.weather,*/
-/*.main,*/
-/*.halloween,*/
-/*.sec,*/
-/*.drink,*/
-/*.col-first,*/
-/*.col-second,*/
-/*h1,*/
-/*h2,*/
-/*h3,*/
-/*p,*/
-/*li,*/
-/*table,*/
-/*tr,*/
-/*td,*/
-/*img*/
-/*{*/
-/*    opacity: 0;*/
-/*    transition: opacity 0.5s ease-in-out;*/
-/*    -webkit-transition: opacity 0.5s ease-in-out;*/
-/*    -moz-transition: opacity 0.5s ease-in-out;*/
-/*    -ms-transition: opacity 0.5s ease-in-out;*/
-/*}*/
+.name,
+.play-news,
+.weather,
+.main,
+.halloween,
+.sec,
+.drink,
+.col-first,
+.col-second,
+h1,
+h2,
+h3,
+p,
+li,
+table,
+tr,
+td,
+img
+{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+}
 
-/*.A4:hover **/
-/*{*/
-/*    opacity: 1;*/
-/*}*/
+.A4:hover *
+{
+    opacity: 1;
+}
 
 @media print
 {
@@ -720,4 +720,5 @@ dd.symbols
         width: 1400px;
         margin-left: 50px;
     }
+
 }
