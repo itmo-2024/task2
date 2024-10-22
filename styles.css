@@ -4,11 +4,8 @@
 }
 
 body {
-    width: 210mm;
-    height: 297mm;
     background-image: url("resources/images/background.jpg");
     background-size: cover;
-    margin: auto;
 }
 
 .newspaper-header {
@@ -24,11 +21,15 @@ body {
     position: relative;
 }
 
+.title-container span {
+    display: inline-block;
+}
+
 .title-container::before {
     content: "";
     position: absolute;
-    top: 10px;
-    width: 303px;
+    top: 14px;
+    width: 48%;
     height: 2px;
     background-color: black;
     left: 0;
@@ -37,36 +38,40 @@ body {
 .title-container::after {
     content: "";
     position: absolute;
-    width: 620px;
+    bottom: 0;
+    width: 100%;
     height: 2px;
     background-color: black;
     left: 0;
 }
 
 .main-title {
-    font: 85px "Mugglenews";
+    width: 100%;
+    font: 125px "Mugglenews";
 }
 
-.color-letter {
+.color-first-letter::first-letter {
     color: #e87046;
 }
 
 .subtitle {
-    font: 10px "Archive Lightface Extended";
+    width: 100%;
+    font: 15px "Archive Lightface Extended";
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.the {
-    font: 19pt "Phyton Script";
+.article {
+    width: 100%;
+    font: 30pt "Phyton Script";
     display: block;
 }
 
-.the::before {
+.article::before {
     content: "";
     position: absolute;
-    top: 10px;
-    width: 295px;
+    top: 14px;
+    width: 47%;
     height: 2px;
     background-color: black;
     right: 5px;
@@ -75,7 +80,7 @@ body {
 .content {
     display: block;
     position: relative;
-    margin: 0 10px 20px 10px;
+    margin: 0 10px 10px 10px;
     border: 2px solid black;
 }
 
@@ -86,11 +91,12 @@ body {
 }
 
 .story-title {
+    width: 50%;
     position: relative;
     text-align: right;
     margin-top: 65px;
     margin-right: 10px;
-    font: 48pt "Champion Gothic";
+    font: 80pt "Champion Gothic";
     text-transform: uppercase;
     line-height: 125%;
 }
@@ -98,28 +104,28 @@ body {
 .story-title-main-words {
     display: block;
     color: #e87046;
-    font-size: 55pt;
+    font-size: 100pt;
 }
 
 .story-text-first-column {
     margin-top: 10px;
     margin-left: 10px;
-    width: 125px;
+    width: 25%;
     text-align: justify;
-    font-size: 8pt;
+    font-size: 18pt;
 }
 
 .story-text-first-column::first-letter {
-    font-size: 30pt;
+    font-size: 45pt;
     color: #e87046;
 }
 
 .story-text-second-column {
     margin-left: 5px;
-    margin-top: 36px;
-    width: 125px;
+    margin-top: 43px;
+    width: 25%;
     text-align: justify;
-    font-size: 8pt;
+    font-size: 18pt;
 }
 
 .image-and-jokes {
@@ -129,12 +135,16 @@ body {
     justify-content: space-between;
 }
 
+.story-image {
+    margin-left: 10%;
+}
+
 li {
     margin: 10px;
 }
 
 .joke-title {
-    font: 26pt "Phyton Script";
+    font: 50pt "Phyton Script";
     text-align: center;
     margin: 0;
     color: #e87046;
@@ -142,12 +152,12 @@ li {
 }
 
 .joke-question {
-    font: 12pt "Wonderworld";
+    font: 20pt "Wonderworld";
     font-weight: bold;
 }
 
 .joke-answer {
-    font: 12pt "Adobe Garamond";
+    font: 20pt "Adobe Garamond";
 }
 
 img {
@@ -157,10 +167,75 @@ img {
 .disclaimer {
     display: block;
     text-align: center;
-    font: 6pt "Archive Lightface Extended";
+    font: 10pt "Archive Lightface Extended";
     line-height: 120%;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+@media print {
+    .newspaper-header {
+        margin: 5px 3px 0 3px;
+    }
+
+    .logo {
+        margin: -30px -50px;
+        scale: 70%;
+    }
+
+    .title-container {
+        margin: 35px 0 60px 10px;
+    }
+
+    .article {
+        font-size: 20pt;
+    }
+
+    .main-title {
+        font-size: 55pt;
+    }
+
+    .subtitle {
+        font-size: 6pt;
+    }
+
+    .content {
+        margin-bottom: 5px;
+    }
+
+    .story-text-first-column, .story-text-second-column {
+        font-size: 9pt;
+    }
+
+    .story-title {
+        margin-top: 20px;
+        font-size: 40pt;
+    }
+
+    .story-title-main-words {
+        font-size: 60pt;
+    }
+
+    .story-image {
+        height: 40%;
+        width: 40%;
+    }
+
+    .joke-title {
+        font-size: 35pt;
+    }
+
+    .joke-question, .joke-answer {
+        font-size: 10pt;
+    }
+
+    .image-and-jokes {
+        margin-bottom: -3px;
+    }
+
+    .disclaimer {
+        font-size: 6pt;
+    }
 }
 
 @font-face {
