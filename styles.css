@@ -19,18 +19,16 @@ header {
 }
 
 .logo h1 {
-    font-family: 'Orbitron', serif;
-    font-size: 56px;
-    font-weight: 700;
+    font: 700 56px 'Orbitron', serif;
     color: #FFEA00;
     text-shadow: 2px 2px 10px rgba(255, 234, 0, 0.7);
     animation: glitch 1s ease-in-out infinite, pause 2s ease-in-out infinite;
     letter-spacing: 2px;
+    margin: 0;
 }
 
 .subtitle p {
-    font-family: 'Orbitron', serif;
-    font-size: 14px;
+    font: 14px 'Orbitron', serif;
     color: #FF007F;
 }
 
@@ -88,8 +86,7 @@ main {
 }
 
 .main-article h2 {
-    font-family: 'Orbitron', serif;
-    font-size: 1.5rem;
+    font: 1.5rem 'Orbitron', serif;
     color: #FF007F;
     margin-bottom: 10px;
 }
