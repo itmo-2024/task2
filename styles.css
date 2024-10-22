@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Rajdhani', serif;
     background-color: #0d0d0d;
@@ -13,10 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    width: 100%;
     background-color: #111;
     text-align: center;
     padding: 10px;
@@ -128,21 +124,21 @@ main {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         overflow: visible;
     }
 
     main {
-        width: 100%;
         margin: 0;
         padding: 0;
         display: block;
     }
 
     .main-article, .article, .sidebar {
-        width: 100%;
         max-width: 100%;
-        margin: 0 auto 20px auto;
+        max-height: 100%;
+        margin: 10px auto 20px auto;
+        page-break-inside: avoid;
     }
 
     header, footer, aside, .sidebar {
@@ -151,8 +147,6 @@ main {
 
     .text-content, h1, h2, h3, h4, p, li {
         font-size: 12pt;
-        margin: 0;
-        padding: 0;
         word-wrap: break-word;
         overflow-wrap: break-word;
         max-width: 100%;
