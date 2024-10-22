@@ -9,7 +9,12 @@ header
 {
     text-align: center;
     position: relative;
-    overflow: hidden;
+}
+
+.logo-img
+{
+    width: 70%;
+    height: auto;
 }
 
 .float-left
@@ -42,14 +47,13 @@ header
 
 .newspaper
 {
-    position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
     grid-gap: 20px;
     padding: 20px;
     margin: 0 auto;
-    max-width: 1200px;
-    overflow: hidden;
+    max-width: 100%;
 }
 
 .running-text-container
@@ -129,6 +133,17 @@ header
     {
         display: none;
     }
+
+    body
+    {
+        font-size: 9.5pt;
+    }
+}
+
+@page
+{
+    size: A4 portrait;
+    margin: 0;
 }
 
 @font-face
@@ -143,15 +158,21 @@ header
     src: url('sources/fonts/MultiTypeGamer.otf') format('truetype');
 }
 
-.article
+.post
 {
+    position: relative;
     background-color: #fff8dc;
     padding: 20px;
     border: 1px solid #d3d3d3;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.article::first-letter
+.post .snitch-post
+{
+    padding-right: 80px;
+}
+
+.post::first-letter
 {
     font-size: 2em;
     float: left;
@@ -160,14 +181,16 @@ header
     text-shadow: 4px 4px 0px #4b5320;
 }
 
-.article-column
+.post-column
 {
+    grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
 
-.article-row
+.post-row
 {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 1;
+    grid-row: auto;
 }
 
 .gif-beer img
