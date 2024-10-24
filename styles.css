@@ -23,7 +23,6 @@ header h1 {
 }
 
 header h2 {
-  font-family: "Playfair Display", serif;
   font-size: 1.2em;
   color: #333;
 }
@@ -46,23 +45,12 @@ h2 {
   position: relative;
 }
 
-.first-letter {
+.article-text::first-letter {
   font-size: 2em;
   font-weight: bold;
   float: left;
   margin-right: 5px;
   line-height: 1;
-}
-
-.vertical-text {
-  writing-mode: vertical-rl;
-  text-align: center;
-  font-size: 1em;
-  font-weight: bold;
-  position: absolute;
-  top: 0;
-  left: -35px;
-  transform: rotate(180deg);
 }
 
 blockquote {
@@ -145,10 +133,17 @@ blockquote {
 @media print {
   body {
     font-size: 10px;
+    background-color: white;
+  }
+
+  header {
+    background-color: white;
+    border: none;
   }
 
   header h1 {
     font-size: 18px;
+    color: #000;
   }
 
   header h2 {
@@ -157,6 +152,7 @@ blockquote {
 
   h2 {
     font-size: 14px;
+    color: #000;
   }
 
   .article-text {
@@ -167,5 +163,12 @@ blockquote {
 
   .image-container img {
     max-width: 60%;
+    box-shadow: none;
+    border: none;
+  }
+
+  .magic-image.move,
+  .magic-image.fade {
+    animation: none;
   }
 }
