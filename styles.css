@@ -41,28 +41,14 @@ body
 
 h1 
 {
-    font-size: 5em;
+    font-size: 4em;
     font-family: "Satyr SP", sans-serif;
+    text-align: center;
 }
 
 hr 
 {
     border-color: black;
-}
-
-span.today 
-{
-    position: relative;
-    bottom: 0.5em;
-    font-size: 2.5em;
-    right: 2%;
-    font-family: "Barocco", sans-serif;
-}
-
-span.weather 
-{
-    margin: 0, 10%;
-    font-family: "Macondo", sans-serif;
 }
 
 img.logo-left 
@@ -75,32 +61,56 @@ img.logo-right
     float: right;
 }
 
-img.zodiac 
+h2.today 
 {
-    position: relative;
-    top: 0.5em;
-    left: 2%;
+    font-size: 2.5em;
+    font-family: "Barocco", sans-serif;
 }
 
-div h1 
+span.weather 
+{
+    font-family: "Macondo", sans-serif;
+}
+
+div.container 
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+table 
+{
+    width: 200px; 
+    margin-left: 2%;
+}
+
+td 
+{
+    padding: 2%; 
+    font-family: monospace; 
+    text-align: left;
+}
+
+td.location,
+td.type-weather 
+{
+    width: 30%;
+}
+
+td.dash 
 {
     text-align: center;
+    width: 15%;
+}
+
+img.zodiac 
+{
+    margin-left: 2%;
 }
 
 header 
 {
-    text-align: center;
     clear: both;
-}
-
-header div 
-{
-    display: inline-block;
-}
-
-header pre 
-{
-    margin: 0.2em 0;
 }
 
 article.sport div 
