@@ -83,20 +83,6 @@ q {
     color: var(--color-lilac-dark);
 }
 
-@media (max-width: 1200px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr 0;
-    }
-    .wrap-right {
-        grid-column-start: 1;
-        border: 0;
-        border-top: 1px solid black;
-    }
-    .wrap-right p {
-        column-count: 1;
-    }
-}
 
 @media print {
     @page {
@@ -104,9 +90,10 @@ q {
         margin: 3mm 5mm;
     }
     body  {
-        font-size: 10pt;
-        margin: 0;
         max-width: 100%;
+        height: 100%;
+        font-size: 8pt;
+        margin: 0;
         border: 1px solid black;
         grid-template-columns: 1.15fr 2fr;
     }
@@ -118,7 +105,7 @@ q {
         margin: .5rem 0 .2rem .5rem;
     }
     article h2 {
-        font-size: 10pt;
+        font-size: 8pt;
     }
     .wrap-right {
         grid-column-start: 2;
