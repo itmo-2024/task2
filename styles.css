@@ -1,0 +1,138 @@
+/* Основные стили для газеты */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 21cm;
+  height: 29.7cm;
+  font-family: "Spectral", serif;
+  background-color: #d2b48c;
+  background-image: url(http://www.transparenttextures.com/patterns/natural-paper.png);
+  margin: 15px;
+  border: 5px #333;
+  font-size: small;
+}
+.logo img {
+  float: left;
+  width: 16%;
+}
+header .logo-text {
+  text-align: center;
+  border-bottom: 3px solid #333;
+}
+
+@font-face {
+  font-family: GreenHillSans;
+  src: url(fonts/GreenHillSans.ttf);
+}
+@font-face {
+  font-family: HaginCaps;
+  src: url(fonts/HaginCaps.ttf);
+}
+@font-face {
+  font-family: DeadHammer;
+  src: url(fonts/DeadHammer.ttf);
+}
+
+h1 {
+  font-family: "GreenHillSans";
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.main-content {
+  margin-top: 20px;
+  border: 3px solid #333;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+.left-up-section {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  grid-area: 1 / 1 / 2 / 2;
+  border-bottom: 3px solid #333;
+  padding-top: 10px;
+}
+
+.left-up-section h3 {
+  font-weight: 800;
+}
+.left-up-section h3::first-letter {
+  font-family: DeadHammer;
+  font-size: xx-large;
+  line-height: 20px;
+}
+
+.left-down-section {
+  grid-area: 2 / 1 / 4 / 2;
+  border-top: 3px solid #333;
+  padding-top: 5px;
+}
+.left-down-section {
+  font-size: smaller;
+  line-height: 21px;
+}
+.left-down-section h3::first-letter {
+  font-family: DeadHammer;
+  font-size: xx-large;
+  line-height: 35px;
+}
+.center-section {
+  grid-area: 1 / 2 / 4 / 3;
+  font-family: Impact, fantasy;
+  font-size: 15px;
+}
+.center-section figure {
+  padding: 15px 0 0 0;
+  text-align: justify;
+  font-family: DeadHammer;
+  font-size: medium;
+}
+
+.center-section h1 {
+  text-align: justify;
+  font-family: HaginCaps;
+  letter-spacing: 1rem;
+  border-bottom: 6px double #333;
+  margin-bottom: 10px;
+}
+
+.right-section {
+  font-family: "Courier", monospace;
+  grid-area: 1 / 3 / 4 / 4;
+  font-weight: 700;
+  font-stretch: 50%;
+  font-size: 14px;
+}
+.right-section h4 {
+  text-align: center;
+  font-size: medium;
+}
+.right-section .attention {
+  border: 3px solid #333;
+  font-weight: 900;
+  padding: 3px;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+p {
+  text-align: justify;
+}
+q {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  quotes: "«" "»";
+}
