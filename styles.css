@@ -1,0 +1,313 @@
+@page {
+  size: A4;
+  margin: 0, 0, 0, 0;
+}
+body {
+  height: 297mm;
+  width: 210mm;
+}
+.header {
+  width: 100%;
+  height: 6%;
+  padding: 1mm;
+  margin: 1mm;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.header div {
+  flex-grow: 1;
+}
+.header_title {
+  font-family: DeutschGothic;
+  font-size: 12mm;
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_title img {
+  margin-right: 3mm;
+  height: 20mm;
+}
+.header_sblock {
+  width: 12%;
+  height: 90%;
+  padding: 1mm;
+  margin: 1mm;
+  border: 0.75mm solid black;
+  border-radius: 1%;
+  text-align: center;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+}
+.header_sblock a {
+  font-family: Newspaper;
+  font-size: 2mm;
+}
+.header_sblock em {
+  line-height: 2mm;
+}
+.deutsch {
+  font-family: DeutschGothic;
+}
+.date {
+  width: 100%;
+  height: 1.5%;
+  padding: 1mm;
+  margin-left: 1mm;
+  margin-right: 1mm;
+  margin-top: 3mm;
+  margin-bottom: 3mm;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1mm solid black;
+  border-top: 1mm solid black;
+  font-size: 5mm;
+}
+.date_mblock {
+  width: 50%;
+  font-weight: bold;
+  font-family: Newspaper;
+  text-align: center;
+}
+.date_sblock {
+  width: 25%;
+  font-weight: bold;
+  font-family: Newspaper;
+  text-align: center;
+}
+.main_page {
+  width: 100%;
+  height: 100%;
+  padding: 1mm;
+  margin: 1mm;
+}
+.main_part {
+  width: 100%;
+  height: 90%;
+  padding: 1mm;
+  margin: 1mm;
+  display: flex;
+}
+.column {
+  height: auto;
+  width: 42mm;
+  margin: 1mm;
+  text-align: justify;
+}
+.column h1 {
+  text-align: center;
+  font-size: 4mm;
+  margin-bottom: 3mm;
+  font-family: HeaderNews;
+}
+.column a {
+  font-size: 4mm;
+  font-family: Newspaper;
+}
+.cauldronAd {
+  background-image: url(media/images/cauldron.jpg);
+  height: 64.6mm;
+  width: 84mm;
+  position: relative;
+  background-position: center;
+  background-size: 100% 100%;
+  border: 0.75mm solid black;
+  border-radius: 0.25%;
+}
+.center-cauldron {
+  margin-left: 24%;
+  margin-top: 11.5%;
+  position: absolute;
+}
+.ad_column {
+  height: auto;
+  width: 40.5%;
+  margin: 1mm;
+}
+.two_column {
+  height: 75%;
+  width: 100%;
+  display: flex;
+}
+.tupichok_column {
+  margin: 1mm;
+  height: auto;
+  width: 39.5%;
+}
+.tupichok {
+  height: 40%;
+  width: 100%;
+}
+.tupichok_upper_bar {
+  width: 100%;
+  height: 10%;
+  border-top: 0.75mm solid black;
+  border-left: 0.75mm solid black;
+  border-right: 0.75mm solid black;
+  box-sizing: border-box;
+  background-color: #a1a1a1;
+  letter-spacing: 3mm;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  font-family: HeaderNews;
+  font-size: 7mm;
+}
+.tupichok_upper_bar a {
+  width: 80%;
+}
+
+.t_box {
+  width: 13.5%;
+  height: 100%;
+  letter-spacing: 0;
+  font-family: HeaderNews;
+  font-size: 7mm;
+  text-align: center;
+}
+.tupichok_body {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+}
+.tupichok_left_bar {
+  width: 17.5%;
+  height: auto;
+  border-left: 0.75mm solid black;
+  background-color: #a1a1a1;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 14mm;
+  font-family: HeaderNews;
+  font-size: 7mm;
+}
+.tupichok_text {
+  padding: 1mm;
+  border: 0.75mm solid black;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 3mm;
+  text-align: justify;
+  background-image: url(media/images/Screenshot_2.png);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.tupichok_text a {
+  font-family: Newspaper;
+}
+.tupichok_right_bar {
+  width: 17.5%;
+  height: auto;
+  border-right: 0.75mm solid black;
+  background-color: #a1a1a1;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 14mm;
+  font-family: HeaderNews;
+  font-size: 7mm;
+}
+.tupichok_lower_bar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  border-bottom: 0.75mm solid black;
+  border-left: 0.75mm solid black;
+  border-right: 0.75mm solid black;
+  background-color: #a1a1a1;
+  letter-spacing: 3mm;
+  overflow: hidden;
+  display: flex;
+  font-family: HeaderNews;
+  font-size: 7mm;
+  text-align: right;
+}
+.tupichok_lower_bar a {
+  width: 80%;
+}
+.mini_margin {
+  margin-left: 1mm;
+}
+.mini2_margin {
+  padding: 2mm;
+}
+.o {
+  letter-spacing: 1mm;
+}
+.tupichok_two_column {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  text-align: justify;
+}
+.tupichok_inside_column {
+  width: 50%;
+  height: auto;
+  margin: 1mm;
+}
+.tupichok_inside_column h1 {
+  text-align: center;
+  font-size: 4mm;
+  margin-bottom: 3mm;
+  font-family: HeaderNews;
+}
+.tupichok_inside_column a {
+  font-size: 4mm;
+  font-family: Newspaper;
+}
+.first_letter {
+  font-family: HeaderNews;
+  font-size: 17.5mm;
+  display: flex;
+  justify-content: center;
+}
+@font-face {
+  font-family: DeutschGothic;
+  src: url(fonts/deutsch-gothic3.ttf);
+}
+@font-face {
+  font-family: Newspaper;
+  src: url(fonts/HaginCapsMedium-Medium.ttf);
+}
+@font-face {
+  font-family: HeaderNews;
+  src: url(fonts/header-newspaper.ttf);
+}
+@media print {
+  .tupichok_text {
+    background-image: url(media/images/Screenshot_2.png);
+    background-position: center;
+    background-size: 100% 100%;
+  }
+}
+
+@media print {
+  .tupichok_text {
+    background-image: url(media/images/Screenshot_2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cauldronAd {
+    background-image: url(media/images/cauldron.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  iframe {
+    display: none;
+  }
+  .site-info,
+  .site-address {
+    display: none;
+  }
+}
