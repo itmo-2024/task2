@@ -1,0 +1,104 @@
+@media print {
+    @page {
+        size: A4 portrait;
+    }
+}
+
+body {
+    background: antiquewhite;
+}
+
+.articles {
+    column-count: 2;
+    column-rule: double;
+}
+
+.first_sentence {
+    font-family: garamond, serif;
+    color: darkblue;
+}
+
+.second_sentence {
+    font-family: 'Brush Script MT', cursive;
+    color: darkmagenta;
+}
+
+.third_sentence {
+    font-family: 'Times New Roman', serif;
+    color: darkred;
+}
+
+q {
+    font-style: italic;
+}
+
+.text_block > p:first-of-type:first-letter {
+    font-weight: bold;
+    font-size: 300%;
+    font-family: 'Brush Script MT', cursive;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+blockquote {
+    background: navajowhite;
+    padding: 16px;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+}
+
+.articles > figure > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+figure > figcaption {
+    text-align: center;
+}
+
+figure {
+    margin: 16px;
+}
+
+.text_block figure {
+    float: left;
+}
+
+.articles > article {
+    margin: 16px 0;
+}
+
+.text_block {
+    text-align: justify;
+    clear: left;
+}
+
+.text_block > p {
+    margin: 0;
+}
+
+.text_block > h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.vertical_text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    float: right;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+blockquote > cite {
+    font-style: normal;
+}
+
+article {
+    page-break-after: always;
+}
