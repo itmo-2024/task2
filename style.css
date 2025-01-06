@@ -1,0 +1,196 @@
+@font-face 
+{
+    font-family: 'MyFont';
+    src: url("./fonts/proletariat.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media print 
+{
+    body 
+    {
+        background-color: white;
+        color: black;
+    }
+}
+
+body 
+{
+    border-width: 2px;
+    border-style: double;
+    font-family: nyt-imperial,georgia,'times new roman',times,Songti SC,simsun,serif;
+    padding: 5px;
+    height: 100%;
+}
+
+.light 
+{
+    display: block;
+}
+
+.dark 
+{
+    display: none;
+}
+
+body:has(.toggle:checked) 
+{
+    background-color: #a08c7c;
+    color: #e7e7d1;
+}
+
+.toggle:checked ~ .dark 
+{
+    display: block;
+}  
+
+.toggle:checked ~ .light 
+{
+    display: none;
+}
+
+img 
+{
+    width: 100%;
+}
+
+.header 
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom: 5px double black;
+}
+
+.header .title 
+{
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    text-align: center;
+    font-family: 'MyFont';
+    font-size: 4rem;
+
+    user-select: none;
+}
+
+.header .title p 
+{
+    margin: 0;
+}
+
+.header .since 
+{
+    grid-row-start: 1;
+    grid-column-start: 3;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .date 
+{
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.content 
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    position: relative;
+    margin-top: 15px;
+}
+
+.content .center 
+{
+    grid-column-start: 1;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+.content .right 
+{
+    grid-column-start: 2;
+    border-left: 2px solid black;
+    padding-left: 7.5px;
+}
+
+.article 
+{
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.article.without-bottom-line 
+{
+    border-bottom: 0;
+}
+
+.title-article 
+{
+    font-family: nyt-cheltenham,cheltenham-fallback-georgia,cheltenham-fallback-noto,georgia,'times new roman',times,serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.article .first-paragraph::first-letter 
+{
+    color: brown;
+    font-size: 1.5em;
+}
+
+.with-img-horizontal 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.with-img-horizontal img 
+{
+    grid-column-start: 1;
+    width: 100%;
+}
+
+.article .with-img-horizontal .start-article 
+{ 
+    grid-column-start: 2;
+}
+
+.with-img-horizontal .start-article .title-article 
+{
+    margin-top: 0;
+    font-family: nyt-cheltenham,cheltenham-fallback-georgia,cheltenham-fallback-noto,georgia,'times new roman',times,serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.with-img-vertical 
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px
+}
+
+.footer 
+{
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer p 
+{
+    margin: 0;
+} 
