@@ -1,304 +1,306 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cyberpunk 2077 News</title>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+      body {
+        background: url("https://sotni.ru/wp-content/uploads/2023/08/tekstura-zemli-mainkraft-1.webp");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        font-family: "Times New Roman", serif;
+        opacity: 0.9;
+      }
 
-        :root {
-            --main: #030913;
-            --mainlight: #010811;
-            --cyan: #f05fe9;
-            --border-width: 3px;
+      .newspaper-clipping {
+        background-color: #f4e4bc;
+        max-width: 1000px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        color: #2b2b2b;
+      }
+
+      .line {
+        margin-top: -80px;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2px 1fr;
+        gap: 20px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #2b2b2b;
+        padding-bottom: 5px;
+      }
+
+      .content {
+        line-height: 1.5;
+      }
+
+      .content::first-letter {
+        font-size: 4em;
+        font-weight: bold;
+        color: #2b2b2b;
+        float: left;
+        margin-right: 5px;
+        line-height: 1;
+      }
+
+      .pig {
+        position: absolute;
+        bottom: 0;
+        right: 400px;
+        animation: pig 5s infinite;
+      }
+      @keyframes pig {
+        0% {
+          transform: translateX(0) scaleX(1);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        45% {
+          transform: translateX(400px) scaleX(1);
         }
-
-        body {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--cyan);
-            background-color: var(--main);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        50% {
+          transform: translateX(400px) scaleX(-1);
         }
-
-        .newspaper_container {
-            transform: skew(-15deg);
-            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
-            rgba(240, 46, 170, 0.3) 10px 10px,
-            rgba(240, 46, 170, 0.2) 15px 15px,
-            rgba(240, 46, 170, 0.1) 20px 20px,
-            rgba(240, 46, 170, 0.05) 25px 25px,
-            rgba(240, 46, 170, 0.05) 30px 30px;
-            transition: all ease-in 0.8s;
+        95% {
+          transform: translateX(0) scaleX(-1);
         }
-
-        .newspaper_container:hover {
-            transform: scale(1.05);
-            box-shadow: none;
+        100% {
+          transform: translateX(0) scaleX(1);
         }
-
-        .newspaper {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            padding: 20px;
-            width: 900px;
-            background: var(--mainlight);
-            border-radius: 10px;
-            overflow: hidden;
-            color: #fff;
-        }
-
-        .newspaper::before,
-        .newspaper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: calc(100% - var(--border-width) * 2);
-            height: calc(100% - var(--border-width) * 2);
-            border: var(--border-width) solid var(--cyan);
-            border-radius: 10px;
-            pointer-events: none;
-        }
-
-        .newspaper::after {
-            z-index: 2;
-            opacity: 0;
-            animation: glitch 2s infinite;
-            mix-blend-mode: screen;
-        }
-
-        .newspaper:hover::after {
-            opacity: 1;
-        }
-
-        @keyframes glitch {
-            10% {
-                clip: rect(10px, 9999px, 50px, 0);
-                transform: translate(-2px, -2px);
-            }
-            20% {
-                clip: rect(85px, 9999px, 140px, 0);
-                transform: translate(2px, -2px);
-            }
-            30% {
-                clip: rect(70px, 9999px, 80px, 0);
-                transform: translate(-2px, 2px);
-            }
-            40% {
-                clip: rect(40px, 9999px, 90px, 0);
-                transform: translate(2px, 2px);
-            }
-            50% {
-                clip: rect(50px, 9999px, 60px, 0);
-                transform: translate(0, 0);
-            }
-            60% {
-                clip: rect(60px, 9999px, 70px, 0);
-                transform: translate(-2px, -2px);
-            }
-            70% {
-                clip: rect(20px, 9999px, 30px, 0);
-                transform: translate(2px, -2px);
-            }
-            80% {
-                clip: rect(90px, 9999px, 100px, 0);
-                transform: translate(-2px, 2px);
-            }
-            90% {
-                clip: rect(30px, 9999px, 40px, 0);
-                transform: translate(2px, 2px);
-            }
-        }
-
-        .news_logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .logo_container {
-            position: relative;
-            width: 200px;
-        }
-
-        .logo_container img {
-            width: 130%;
-            height: auto;
-            display: block;
-        }
-
-        .logo_color {
-            position: relative;
-            display: block;
-            margin: 0 auto;
-            opacity: 1;
-        }
-
-        .logo_gray {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 80% {
-                opacity: 0;
-            }
-            81%, 90% {
-                opacity: 1;
-            }
-            91%, 100% {
-                opacity: 0;
-            }
-        }
-
-        .news_logo small {
-            transform: rotate(-90deg);
-            margin-left: 50px;
-            color: azure;
-        }
-
-        .main_information {
-            font-size: 14px;
-            text-align: left;
-        }
-
-        .main_information p {
-            text-align: justify;
-            hyphens: auto;
-            margin-bottom: 1em;
-        }
-
-        .main_information p::first-letter {
-            font-size: 2em;
-            float: left;
-            line-height: 1;
-            margin-right: 5px;
-            font-family: 'Orbitron', sans-serif;
-            color: var(--cyan);
-        }
-
-        blockquote {
-            font-style: italic;
-            font-size: 1em;
-            margin: 10px 0;
-            color: var(--cyan);
-        }
-
-        .image_container {
-            margin: 10px 0;
-            text-align: center;
-        }
-
-        .image_container video {
-            width: 100%;
-            max-width: 100%;
-            animation: fadeInOut 5s infinite;
-        }
-
-        .image_container figcaption {
-            text-align: center;
-            font-style: italic;
-            font-size: 0.8em;
-            color: var(--cyan);
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .news_column {
-            flex: 1;
-            padding: 10px;
-        }
-
-        .news_block {
-            margin-bottom: 20px;
-        }
-
-        .news_block h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: var(--cyan);
-        }
-
-        .news_block p {
-            margin-bottom: 10px;
-        }
-
-        .news_column small {
-            display: block;
-            text-align: right;
-            font-size: 0.8em;
-            margin-top: 60px;
-        }
-
-        .vl {
-            border-left:1px solid var(--cyan);
-        }
-
-
+      }
     </style>
-</head>
-<body>
-<div class="newspaper_container">
-    <div class="newspaper">
-        <div class="news_column">
-            <div class="main_information">
-                <h2>Main Cyberpunk News</h2>
-                <p>The long-awaited update for <strong>Cyberpunk 2077</strong>, titled <em>"Phantom Liberty"</em>, has finally been released, bringing numerous new features and storylines to the game. Players can immerse themselves in new adventures alongside well-known characters and explore previously undiscovered areas of Night City.</p>
+    <title>2B2T news</title>
+  </head>
+  <body>
+    <div class="newspaper-clipping">
+      <header>
+        <div class="logo-container">
+          <img
+            src="https://i.gifer.com/1er8.gif"
+            alt="Left decorative image"
+            width="64"
+            height="256"
+          />
+          <img
+            src="img/news-logo.png"
+            alt="2b2t news logo"
+            width="512"
+            height="256"
+          />
+          <img
+            src="https://i.gifer.com/1er8.gif"
+            alt="Left decorative image"
+            width="64"
+            height="256"
+          />
+        </div>
+        <img src="img/line.png" alt="Decorative line" class="line" />
+      </header>
 
-                <blockquote>"Phantom Liberty is a breath of fresh air for the Cyberpunk universe, offering an engaging storyline and improved gameplay."</blockquote>
-
-                <div class="image_container">
-                    <video poster="https://www.cyberpunk.net/build/images/phantom-liberty/CP77_Phantom_Liberty_KV_16x9_RGB_no_PhL-0a5aaaf8.jpg" autoplay loop muted playsinline>
-                        <source src="https://cdn-l-cyberpunk.cdprojektred.com/video/CP2077_PhL_KV_Animation_1920x1080_AV1.mp4" type="video/mp4; codecs=av01.0.05M.08">
-                        <source src="https://cdn-l-cyberpunk.cdprojektred.com/video/CP2077_PhL_KV_Animation_1920x1080_h264.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>Poster for the "Phantom Liberty" update.</figcaption>
-                </div>
-
-                <p>Additionally, the developers have enhanced the game's performance and fixed numerous bugs, making the gaming experience even more enjoyable. The player community is actively discussing the new features and sharing their impressions.</p>
+      <div class="grid-container">
+        <div class="left-column">
+          <div class="section">
+            <div class="section-title">Самый влиятельный клан - кто они?</div>
+            <img
+              src="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/1920px-SpawnMason_logo.png"
+              alt="Логотип Масонов"
+              style="
+                display: block;
+                margin: 20px auto;
+                max-width: 150px;
+                height: auto;
+              "
+            />
+            <div class="content">
+              <p>
+                <b>SpawnMasons</b> — это легендарный клан на сервере
+                <b>2B2T</b>, известный своей скрытностью и умением использовать
+                новейшие эксплойты. Их деятельность оказала огромное влияние на
+                экономику и жизнь сервера.
+              </p>
+              <p>
+                Клан прославился не только грабежами, но и масштабными рейдами,
+                которые они проводят с использованием сложных инструментов и
+                автоматизации. Благодаря эксплойту
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                Масоны стали владельцами миллионов редких ресурсов и укрепили
+                свою власть.
+              </p>
+              <p>
+                Несмотря на закрытый характер организации,
+                <b>SpawnMasons</b> продолжают адаптироваться к изменениям на
+                сервере и внедрять новые стратегии для поддержания своей
+                доминирующей позиции.
+              </p>
+              <p>
+                Сегодня клан также участвует в социальных проектах, поддерживая
+                других игроков и предоставляя ресурсы для развития.
+              </p>
             </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">
+              Новый эксплойт
+              <a href="https://github.com/spawnmason/randar-explanation"
+                ><code>Randar</code></a
+              >
+              и его последствия
+            </div>
+            <div class="content">
+              <p>
+                Эксплойт
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                стал настоящим прорывом в использовании серверных уязвимостей. С
+                его помощью игроки могли отслеживать передвижения других
+                участников в Верхнем мире. Разработчик эксплойта предоставил
+                подробное описание его работы, что вызвало бурю обсуждений в
+                сообществе <b>2B2T</b>.
+              </p>
+              <p>
+                Изначально
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                был использован для поиска баз и стэшей, однако его последствия
+                оказались гораздо серьезнее. <b>SpawnMasons</b> оперативно
+                адаптировали этот инструмент для стратегического захвата
+                ресурсов. Эксплойт не работал в Аду и Энде, но этого было
+                достаточно, чтобы перевернуть экономику сервера.
+              </p>
+              <p>
+                Сегодня использование <code>Randar</code> сократилось из-за
+                обновлений, но он остается одним из самых известных инструментов
+                в истории <b>2B2T</b>.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="vl"></div>
+        <div></div>
 
-        <div class="news_column">
-            <div class="main_information">
-                <h2>New Cyberpunk Anime Series Announced</h2>
-                <p>A new anime set in the Cyberpunk universe has been announced. This series will explore the stories of mercenaries living on the edge of Night City, battling megacorporations and their own demons. The art style is said to blend traditional anime with the gritty, neon-lit aesthetics of Cyberpunk.</p>
-                <p>The series is set to premiere in early 2025, and fans are already excited about its potential to expand the lore of Night City.</p>
-
-                <div class="image_container">
-                    <video autoplay loop muted playsinline>
-                        <source src="img/Netflix%20x%20CDPR%20x%20Cyberpunk%20.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <figcaption>Cyberpunk Anime Series Trailer</figcaption>
-                </div>
-
+        <div class="right-column">
+          <div class="section">
+            <div class="section-title">
+              Как ошибка в архитектуре породила
+              <a href="https://github.com/spawnmason/randar-explanation"
+                ><code>Randar</code></a
+              >
             </div>
+            <div class="content">
+              <p>
+                Всё началось в <b>2011</b>, когда в
+                <b>Minecraft Beta 1.8</b> разработчики добавили генерацию
+                построек в мире, таких как деревни, храмы и шахты. Однако одна
+                ошибка в архитектуре кода осталась незамеченной: для генерации
+                построек и выпадения предметов использовался
+                <i>один и тот же</i> генератор случайных чисел.
+              </p>
+              <p>
+                Эта ошибка создала уязвимость, которая стала фундаментом для
+                эксплойта
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >. Проблема заключалась в том, что каждый раз, когда сервер
+                загружал чанки, генератор случайных чисел оставлял предсказуемый
+                след. Это означало, что можно было определить координаты недавно
+                загруженных чанков, зная только данные об активности игроков.
+              </p>
+              <p>
+                Эксплойт
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                был разработан опытными игроками, которые обнаружили эту
+                зависимость в алгоритме. Используя эту уязвимость, они могли
+                отслеживать передвижения игроков и находить скрытые базы. Такой
+                инструмент изменил баланс сил на сервере, делая защищенные зоны
+                более уязвимыми.
+              </p>
+              <p>
+                Эта ошибка оставалась неустранённой на протяжении многих лет,
+                пока обновление до версии <b>Minecraft 1.13</b> не внесло
+                изменения в алгоритм генерации. Однако на серверах, оставшихся
+                на старых версиях,
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                продолжает работать, напоминая о том, как одна небольшая ошибка
+                в коде может породить катастрофические последствия.
+              </p>
+              <p>
+                История эксплойта
+                <a href="https://github.com/spawnmason/randar-explanation"
+                  ><code>Randar</code></a
+                >
+                стала уроком для разработчиков и напоминанием о важности
+                тщательного тестирования архитектуры кода. Для игроков
+                <b>2B2T</b> это еще один пример того, как технические знания и
+                креативность могут изменить правила игры.
+              </p>
+            </div>
+          </div>
 
-
-            <small>© 2077 Night City News</small>
+          <div class="section">
+            <div class="section-title">
+              <a href="https://github.com/spawnmason/randar-explanation"
+                ><code>Randar</code></a
+              >
+              в действии
+            </div>
+            <div class="content">
+              <video
+                src="img/timelapse_bw.mp4"
+                width="512"
+                height="256"
+                autoplay
+                loop
+                muted
+                playsinline
+                alt="Randar в действии"
+              ></video>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="pig">
+        <img
+          src="https://media.tenor.com/iUoxFQGhxcAAAAAj/pig-mine.gif"
+          alt="Поросенок"
+        />
+      </div>
     </div>
-
-</div>
-</body>
+  </body>
 </html>
