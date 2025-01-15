@@ -1,0 +1,83 @@
+@font-face {
+    font-family: PaladinRus;
+    src: url(fonts/ofont.ru_PaladinRus.ttf);
+}
+
+@font-face {
+    font-family: Gothic;
+    src: url(fonts/deutsch-gothic3.ttf);
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: "Gothic", serif;
+    margin: 0 0 10px;
+}
+
+h1 {
+    -webkit-text-stroke: 1px #131f4a;
+    border-bottom: 3px solid black;
+}
+
+@media (width > 1960px) {
+    body {
+        max-width: 1960px;
+    }
+}
+@media (width > 1960px) {
+    body {
+        max-width: 1960px;
+    }
+}
+@media (width < 1960px) {
+    body {
+        max-width: 1240px;
+    }
+}
+
+@media (width < 768px) {
+    body{
+        max-width: 600px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr); /* Уменьшаем до 6 колонок */
+    }
+    .section-3 {
+        grid-column: span 3;
+    }
+    .section-6 {
+        grid-column: span 6;
+    }
+}
+
+
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+@media print {
+    body {
+        color: black;
+        background: white;
+        font-size: 12pt;
+        margin: 0;
+        /*padding: 10px;*/
+        width: 100%;
+        max-width: 100%;
+        line-height: 1 !important;
+    }
+
+    header, footer {
+        background: none;
+        color: black;
+    }
+
+    img {
+        animation: none;
+    }
+
+}
