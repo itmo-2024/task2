@@ -30,7 +30,6 @@ body {
 }
 .header_title img {
   margin-right: 3mm;
-  height: 20mm;
 }
 .header_sblock {
   width: 12%;
@@ -42,14 +41,21 @@ body {
   text-align: center;
   flex-shrink: 0;
   align-items: center;
-  display: flex;
+  line-height: 2mm;
+  font-style: italic;
 }
+.header_sblock h5 {
+  text-align: center;
+  font-family: Newspaper;
+  font-size: 2mm;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5mm;
+}
+
 .header_sblock a {
   font-family: Newspaper;
   font-size: 2mm;
-}
-.header_sblock em {
-  line-height: 2mm;
 }
 .deutsch {
   font-family: DeutschGothic;
