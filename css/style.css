@@ -258,6 +258,7 @@ body {
 .texts {
   column-count: 3;
   column-rule: solid #b1a173;
+  column-width: 300px;
 }
 
 h1 {
@@ -304,14 +305,6 @@ article {
   margin: 16px 0;
 }
 
-.first-letter {
-  font-size: 300%;
-  font-weight: bold;
-  float: left;
-  line-height: 1;
-  margin-right: 10px;
-  color: #d6b188;
-}
 
 /* Bad script,
  * Gabriola,
@@ -377,3 +370,14 @@ li {
   margin: 0;
 }
 
+.str1:first-of-type:first-letter,
+.str2:first-of-type:first-letter,
+.str3:first-of-type:first-letter,
+.header-text:first-of-type:first-letter {
+  font-size: 300%;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 10px;
+  color: #d6b188;
+}
