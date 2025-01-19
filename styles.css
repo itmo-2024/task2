@@ -6,7 +6,7 @@ body {
   height: 297mm;
   width: 210mm;
 }
-.header {
+header {
   width: 100%;
   height: 6%;
   padding: 1mm;
@@ -87,7 +87,7 @@ body {
   font-family: Newspaper;
   text-align: center;
 }
-.main_page {
+.main {
   width: 100%;
   height: 100%;
   padding: 1mm;
@@ -116,6 +116,15 @@ body {
   font-size: 4mm;
   font-family: Newspaper;
 }
+
+q {
+    quotes: '«' '»';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4mm;
+    font-family: Newspaper;
+}
+
 .cauldronAd {
   background-image: url(media/images/cauldron.jpg);
   height: 64.6mm;
@@ -281,11 +290,26 @@ body {
   font-size: 4mm;
   font-family: Newspaper;
 }
-.first_letter {
-  font-family: HeaderNews;
-  font-size: 17.5mm;
-  display: flex;
-  justify-content: center;
+.column p::first-letter {
+    font-family: HeaderNews;
+    font-size: 17.5mm;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+}
+
+.no_first_letter p::first-letter{
+    font-family: Newspaper;
+    font-size: 4mm;
+    margin-left: 0%;
+}
+
+.tupichok_inside_column p::first-letter {
+    font-family: HeaderNews;
+    font-size: 17.5mm;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
 }
 @font-face {
   font-family: DeutschGothic;
