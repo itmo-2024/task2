@@ -1,347 +1,340 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <style>
-      body {
-        background: url("https://sotni.ru/wp-content/uploads/2023/08/tekstura-zemli-mainkraft-1.webp");
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 20px;
-        font-family: "Times New Roman", serif;
-        opacity: 0.9;
-      }
-
-      header {
-        text-align: center;
-      }
-
-      .newspaper-clipping {
-        background-color: #f4e4bc;
-        max-width: 1000px;
-        padding: 20px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        position: relative;
-        color: #2b2b2b;
-      }
-
-      .line {
-        margin-top: -80px;
-      }
-
-      .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .mason-logo {
-        display: block;
-        margin: 20px auto;
-        max-width: 150px;
-      }
-
-      a {
-        color: gray;
-        text-decoration: none;
-      }
-
-      .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 2px 1fr;
-        gap: 20px;
-      }
-
-      .section {
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-      }
-
-      .section-title {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #2b2b2b;
-        padding-bottom: 5px;
-      }
-
-      .content {
-        line-height: 1.5;
-      }
-
-      .content::first-letter {
-        font-size: 4em;
-        font-weight: bold;
-        color: #2b2b2b;
-        float: left;
-        margin-right: 5px;
-        line-height: 1;
-      }
-
-      .pig {
-        position: absolute;
-        bottom: 0;
-        right: 400px;
-        animation: pig 5s infinite;
-      }
-      @keyframes pig {
-        0% {
-          transform: translateX(0) scaleX(1);
+        body {
+            background: url("https://sotni.ru/wp-content/uploads/2023/08/tekstura-zemli-mainkraft-1.webp");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: "Times New Roman", serif;
+            opacity: 0.9;
         }
-        45% {
-          transform: translateX(400px) scaleX(1);
-        }
-        50% {
-          transform: translateX(400px) scaleX(-1);
-        }
-        95% {
-          transform: translateX(0) scaleX(-1);
-        }
-        100% {
-          transform: translateX(0) scaleX(1);
-        }
-      }
 
-      @media (max-width: 1000px) {
+        header {
+            text-align: center;
+        }
+
+        .newspaper-clipping {
+            background-color: #f4e4bc;
+            max-width: 1000px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            color: #2b2b2b;
+        }
+
+        .line {
+            margin-top: -80px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mason-logo {
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+        }
+
         .grid-container {
-          grid-template-columns: 1fr;
-          max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2px 1fr;
+            gap: 20px;
         }
 
-        .newspaper-clipping,
-        video {
-          width: 100%;
-        }
-
-        .img {
-          max-width: 100%;
-        }
-
-        .line,
-        .lava,
-        .pig {
-          display: none;
-        }
-
-        .content::first-letter {
-          font-size: 2.5em;
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
-          font-size: 1em;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #2b2b2b;
+            padding-bottom: 5px;
         }
 
         .content {
-          font-size: 0.8em;
+            line-height: 1.5;
         }
-      }
+
+        .content::first-letter {
+            font-size: 4em;
+            font-weight: bold;
+            color: #2b2b2b;
+            float: left;
+            margin-right: 5px;
+            line-height: 1;
+        }
+
+        .pig {
+            position: absolute;
+            bottom: 0;
+            right: 400px;
+            animation: pig 5s infinite;
+        }
+        @keyframes pig {
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+            45% {
+                transform: translateX(400px) scaleX(1);
+            }
+            50% {
+                transform: translateX(400px) scaleX(-1);
+            }
+            95% {
+                transform: translateX(0) scaleX(-1);
+            }
+            100% {
+                transform: translateX(0) scaleX(1);
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+
+            .newspaper-clipping, video, img {
+                max-width: 100%;
+            }
+
+            .line, .lava, .pig {
+                display: none;
+            }
+
+            .content::first-letter {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 1em;
+            }
+
+            .content {
+                font-size: 0.8em;
+            }
+        }
+
     </style>
     <title>2B2T news</title>
-  </head>
-  <body>
-    <div class="newspaper-clipping">
-      <header>
+</head>
+<body>
+<div class="newspaper-clipping">
+    <header>
         <div class="logo-container">
-          <img
-            src="https://i.gifer.com/1er8.gif"
-            alt="Left decorative image"
-            width="64"
-            height="256"
-            class="lava"
-          />
-          <img
-            src="img/news-logo.png"
-            alt="2b2t news logo"
-            width="512"
-            height="256"
-          />
-          <img
-            src="https://i.gifer.com/1er8.gif"
-            alt="Left decorative image"
-            width="64"
-            height="256"
-            class="lava"
-          />
-        </div>
-        <img src="img/line.png" alt="Decorative line" class="line" />
-      </header>
-
-      <div class="grid-container">
-        <div class="left-column">
-          <div class="section">
-            <div class="section-title">Самый влиятельный клан - кто они?</div>
             <img
-              src="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/1920px-SpawnMason_logo.png"
-              alt="Логотип Масонов"
-              class="mason-logo"
+                    src="https://i.gifer.com/1er8.gif"
+                    alt="Left decorative image"
+                    width="64"
+                    height="256"
+                    class="lava"
             />
-            <div class="content">
-              <p>
-                <b>SpawnMasons</b> — это легендарный клан на сервере
-                <b>2B2T</b>, известный своей скрытностью и умением использовать
-                новейшие эксплойты. Их деятельность оказала огромное влияние на
-                экономику и жизнь сервера.
-              </p>
-              <p>
-                Клан прославился не только грабежами, но и масштабными рейдами,
-                которые они проводят с использованием сложных инструментов и
-                автоматизации. Благодаря эксплойту
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                Масоны стали владельцами миллионов редких ресурсов и укрепили
-                свою власть.
-              </p>
-              <p>
-                Несмотря на закрытый характер организации,
-                <b>SpawnMasons</b> продолжают адаптироваться к изменениям на
-                сервере и внедрять новые стратегии для поддержания своей
-                доминирующей позиции.
-              </p>
-              <p>
-                Сегодня клан также участвует в социальных проектах, поддерживая
-                других игроков и предоставляя ресурсы для развития.
-              </p>
-            </div>
-          </div>
+            <img
+                    src="img/news-logo.png"
+                    alt="2b2t news logo"
+                    width="512"
+                    height="256"
+            />
+            <img
+                    src="https://i.gifer.com/1er8.gif"
+                    alt="Left decorative image"
+                    width="64"
+                    height="256"
+                    class="lava"
+            />
+        </div>
+        <img src="img/line.png" alt="Decorative line" class="line" width="1024" height="144"/>
+    </header>
 
-          <div class="section">
-            <div class="section-title">
-              Новый эксплойт
-              <a href="https://github.com/spawnmason/randar-explanation"
-                ><code>Randar</code></a
-              >
-              и его последствия
+    <div class="grid-container">
+        <div class="left-column">
+            <div class="section">
+                <div class="section-title">Самый влиятельный клан - кто они?</div>
+                <img
+                        src="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/1920px-SpawnMason_logo.png"
+                        alt="Логотип Масонов" class="mason-logo" width="150px"
+                />
+                <div class="content">
+                    <p>
+                        <b>SpawnMasons</b> — это легендарный клан на сервере
+                        <b>2B2T</b>, известный своей скрытностью и умением использовать
+                        новейшие эксплойты. Их деятельность оказала огромное влияние на
+                        экономику и жизнь сервера.
+                    </p>
+                    <p>
+                        Клан прославился не только грабежами, но и масштабными рейдами,
+                        которые они проводят с использованием сложных инструментов и
+                        автоматизации. Благодаря эксплойту
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        Масоны стали владельцами миллионов редких ресурсов и укрепили
+                        свою власть.
+                    </p>
+                    <p>
+                        Несмотря на закрытый характер организации,
+                        <b>SpawnMasons</b> продолжают адаптироваться к изменениям на
+                        сервере и внедрять новые стратегии для поддержания своей
+                        доминирующей позиции.
+                    </p>
+                    <p>
+                        Сегодня клан также участвует в социальных проектах, поддерживая
+                        других игроков и предоставляя ресурсы для развития.
+                    </p>
+                </div>
             </div>
-            <div class="content">
-              <p>
-                Эксплойт
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                стал настоящим прорывом в использовании серверных уязвимостей. С
-                его помощью игроки могли отслеживать передвижения других
-                участников в Верхнем мире. Разработчик эксплойта предоставил
-                подробное описание его работы, что вызвало бурю обсуждений в
-                сообществе <b>2B2T</b>.
-              </p>
-              <p>
-                Изначально
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                был использован для поиска баз и стэшей, однако его последствия
-                оказались гораздо серьезнее. <b>SpawnMasons</b> оперативно
-                адаптировали этот инструмент для стратегического захвата
-                ресурсов. Эксплойт не работал в Аду и Энде, но этого было
-                достаточно, чтобы перевернуть экономику сервера.
-              </p>
-              <p>
-                Сегодня использование <code>Randar</code> сократилось из-за
-                обновлений, но он остается одним из самых известных инструментов
-                в истории <b>2B2T</b>.
-              </p>
+
+            <div class="section">
+                <div class="section-title">
+                    Новый эксплойт
+                    <a href="https://github.com/spawnmason/randar-explanation"
+                    ><code>Randar</code></a
+                    >
+                    и его последствия
+                </div>
+                <div class="content">
+                    <p>
+                        Эксплойт
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        стал настоящим прорывом в использовании серверных уязвимостей. С
+                        его помощью игроки могли отслеживать передвижения других
+                        участников в Верхнем мире. Разработчик эксплойта предоставил
+                        подробное описание его работы, что вызвало бурю обсуждений в
+                        сообществе <b>2B2T</b>.
+                    </p>
+                    <p>
+                        Изначально
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        был использован для поиска баз и стэшей, однако его последствия
+                        оказались гораздо серьезнее. <b>SpawnMasons</b> оперативно
+                        адаптировали этот инструмент для стратегического захвата
+                        ресурсов. Эксплойт не работал в Аду и Энде, но этого было
+                        достаточно, чтобы перевернуть экономику сервера.
+                    </p>
+                    <p>
+                        Сегодня использование <code>Randar</code> сократилось из-за
+                        обновлений, но он остается одним из самых известных инструментов
+                        в истории <b>2B2T</b>.
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
 
         <div></div>
 
         <div class="right-column">
-          <div class="section">
-            <div class="section-title">
-              Как ошибка в архитектуре породила
-              <a href="https://github.com/spawnmason/randar-explanation"
-                ><code>Randar</code></a
-              >
+            <div class="section">
+                <div class="section-title">
+                    Как ошибка в архитектуре породила
+                    <a href="https://github.com/spawnmason/randar-explanation"
+                    ><code>Randar</code></a
+                    >
+                </div>
+                <div class="content">
+                    <p>
+                        Всё началось в <b>2011</b>, когда в
+                        <b>Minecraft Beta 1.8</b> разработчики добавили генерацию
+                        построек в мире, таких как деревни, храмы и шахты. Однако одна
+                        ошибка в архитектуре кода осталась незамеченной: для генерации
+                        построек и выпадения предметов использовался
+                        <i>один и тот же</i> генератор случайных чисел.
+                    </p>
+                    <p>
+                        Эта ошибка создала уязвимость, которая стала фундаментом для
+                        эксплойта
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >. Проблема заключалась в том, что каждый раз, когда сервер
+                        загружал чанки, генератор случайных чисел оставлял предсказуемый
+                        след. Это означало, что можно было определить координаты недавно
+                        загруженных чанков, зная только данные об активности игроков.
+                    </p>
+                    <p>
+                        Эксплойт
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        был разработан опытными игроками, которые обнаружили эту
+                        зависимость в алгоритме. Используя эту уязвимость, они могли
+                        отслеживать передвижения игроков и находить скрытые базы. Такой
+                        инструмент изменил баланс сил на сервере, делая защищенные зоны
+                        более уязвимыми.
+                    </p>
+                    <p>
+                        Эта ошибка оставалась неустранённой на протяжении многих лет,
+                        пока обновление до версии <b>Minecraft 1.13</b> не внесло
+                        изменения в алгоритм генерации. Однако на серверах, оставшихся
+                        на старых версиях,
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        продолжает работать, напоминая о том, как одна небольшая ошибка
+                        в коде может породить катастрофические последствия.
+                    </p>
+                    <p>
+                        История эксплойта
+                        <a href="https://github.com/spawnmason/randar-explanation"
+                        ><code>Randar</code></a
+                        >
+                        стала уроком для разработчиков и напоминанием о важности
+                        тщательного тестирования архитектуры кода. Для игроков
+                        <b>2B2T</b> это еще один пример того, как технические знания и
+                        креативность могут изменить правила игры.
+                    </p>
+                </div>
             </div>
-            <div class="content">
-              <p>
-                Всё началось в <b>2011</b>, когда в
-                <b>Minecraft Beta 1.8</b> разработчики добавили генерацию
-                построек в мире, таких как деревни, храмы и шахты. Однако одна
-                ошибка в архитектуре кода осталась незамеченной: для генерации
-                построек и выпадения предметов использовался
-                <i>один и тот же</i> генератор случайных чисел.
-              </p>
-              <p>
-                Эта ошибка создала уязвимость, которая стала фундаментом для
-                эксплойта
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >. Проблема заключалась в том, что каждый раз, когда сервер
-                загружал чанки, генератор случайных чисел оставлял предсказуемый
-                след. Это означало, что можно было определить координаты недавно
-                загруженных чанков, зная только данные об активности игроков.
-              </p>
-              <p>
-                Эксплойт
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                был разработан опытными игроками, которые обнаружили эту
-                зависимость в алгоритме. Используя эту уязвимость, они могли
-                отслеживать передвижения игроков и находить скрытые базы. Такой
-                инструмент изменил баланс сил на сервере, делая защищенные зоны
-                более уязвимыми.
-              </p>
-              <p>
-                Эта ошибка оставалась неустранённой на протяжении многих лет,
-                пока обновление до версии <b>Minecraft 1.13</b> не внесло
-                изменения в алгоритм генерации. Однако на серверах, оставшихся
-                на старых версиях,
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                продолжает работать, напоминая о том, как одна небольшая ошибка
-                в коде может породить катастрофические последствия.
-              </p>
-              <p>
-                История эксплойта
-                <a href="https://github.com/spawnmason/randar-explanation"
-                  ><code>Randar</code></a
-                >
-                стала уроком для разработчиков и напоминанием о важности
-                тщательного тестирования архитектуры кода. Для игроков
-                <b>2B2T</b> это еще один пример того, как технические знания и
-                креативность могут изменить правила игры.
-              </p>
-            </div>
-          </div>
 
-          <div class="section">
-            <div class="section-title">
-              <a href="https://github.com/spawnmason/randar-explanation"
-                ><code>Randar</code></a
-              >
-              в действии
+            <div class="section">
+                <div class="section-title">
+                    <a href="https://github.com/spawnmason/randar-explanation"
+                    ><code>Randar</code></a
+                    >
+                    в действии
+                </div>
+                <div class="content">
+                    <video
+                            src="img/timelapse_bw.mp4"
+                            width="512"
+                            height="256"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            alt="Randar в действии"
+                    ></video>
+                </div>
             </div>
-            <div class="content">
-              <video
-                src="img/timelapse_bw.mp4"
-                width="512"
-                height="256"
-                autoplay
-                loop
-                muted
-                playsinline
-                alt="Randar в действии"
-              ></video>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="pig">
-        <img
-          src="https://media.tenor.com/iUoxFQGhxcAAAAAj/pig-mine.gif"
-          alt="Поросенок"
-        />
-      </div>
     </div>
-  </body>
+    <div class="pig">
+        <img
+                src="https://media.tenor.com/iUoxFQGhxcAAAAAj/pig-mine.gif"
+                alt="Поросенок"
+        />
+    </div>
+</div>
+</body>
 </html>
