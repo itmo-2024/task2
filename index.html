@@ -15,6 +15,10 @@
         opacity: 0.9;
       }
 
+      header {
+        text-align: center;
+      }
+
       .newspaper-clipping {
         background-color: #f4e4bc;
         max-width: 1000px;
@@ -32,6 +36,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .mason-logo {
+        display: block;
+        margin: 20px auto;
+        max-width: 150px;
       }
 
       a {
@@ -96,6 +106,40 @@
           transform: translateX(0) scaleX(1);
         }
       }
+
+      @media (max-width: 1000px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+          max-width: 100%;
+        }
+
+        .newspaper-clipping,
+        video {
+          width: 100%;
+        }
+
+        .img {
+          max-width: 100%;
+        }
+
+        .line,
+        .lava,
+        .pig {
+          display: none;
+        }
+
+        .content::first-letter {
+          font-size: 2.5em;
+        }
+
+        .section-title {
+          font-size: 1em;
+        }
+
+        .content {
+          font-size: 0.8em;
+        }
+      }
     </style>
     <title>2B2T news</title>
   </head>
@@ -108,6 +152,7 @@
             alt="Left decorative image"
             width="64"
             height="256"
+            class="lava"
           />
           <img
             src="img/news-logo.png"
@@ -120,6 +165,7 @@
             alt="Left decorative image"
             width="64"
             height="256"
+            class="lava"
           />
         </div>
         <img src="img/line.png" alt="Decorative line" class="line" />
@@ -132,12 +178,7 @@
             <img
               src="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/1920px-SpawnMason_logo.png"
               alt="Логотип Масонов"
-              style="
-                display: block;
-                margin: 20px auto;
-                max-width: 150px;
-                height: auto;
-              "
+              class="mason-logo"
             />
             <div class="content">
               <p>
